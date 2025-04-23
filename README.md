@@ -32,6 +32,6 @@ Unit Lily S3 is a development board based on the ESP32-S3 chip, designed for var
 | ✅ **Distributed GND & 3.3 V Pads**               | Multiple solder points to power sensors and actuators without complex wiring.                                            |
 | ✅ **QWIIC Connector**                            | Standard SparkFun QWIIC I²C bus for rapid connection of compatible modules (sensors, displays, expansions).              |
 
-## UNIT LilyPad S3
+## UNIT LilyPad S3.
 
 <a href="#"><img src="hardware/resources/lilypad.png" width="500px"><br/> UNIT LilyPad S3</a>

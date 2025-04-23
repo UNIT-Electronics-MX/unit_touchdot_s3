@@ -5,7 +5,7 @@
 
 ---
 
-## Pinout
+## PINOUT
 
 <a href="#"><img src="resources/UNIT_LilyPad_S3_V0.1.1_v8_in.jpg" width="500px"><br/> Pinout</a>
 
