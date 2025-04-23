@@ -5,10 +5,9 @@ Unit Lily S3 is a development board based on the ESP32-S3 chip, designed for var
 ## Microcontroller: ESP32-S3 Mini
 - **Low Power Consumption**  
 - **With or Without PSRAM**  
-  - _Without PSRAM_: sufficient for basic sensing and actuation projects.  
-  - _With PSRAM (8 MB)_: recommended for embedded **AI workloads**.  
+  - _Without PSRAM_: Suitable for basic projects with sensors and actuators.    
 - **3.3 V Power Rail**  
-  Compatible with LilyPad / QWIIC low-voltage sensors and modules, facilitating integration into wearables and textile prototypes.
+  Compatible with LilyPad, QWIIC low-voltage sensors and modules, enabling easy integration into weareble prototypes.
 
 ---
 
@@ -17,7 +16,7 @@ Unit Lily S3 is a development board based on the ESP32-S3 chip, designed for var
   Reversible USB-C port for power and programming.  
 - **Integrated LiPo Battery Management**   
 - **Distributed Power Pads**  
-  - Magnetic connectors for **GND** and **3.3 V** evenly distributed.  
+  - Magnetic connectors for **GND** and **3.3 V** distributed.  
   - Simplifies wiring to sensors, actuators, and external modules.
 
 
