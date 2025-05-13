@@ -15,7 +15,7 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 
 # ESP32-S3 Development Board 
 
-![product](./images/product.png)
+![product](./images/product.jpg)
 
 ## Introduction
 

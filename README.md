@@ -1,13 +1,13 @@
-# UNIT Lily S3 Development board 
+# UNIT Touchdot S3 Development board 
 
-Unit Lily S3 is a development board based on the ESP32-S3 chip, designed for various applications including IoT, AI, and machine learning. It features a compact design, multiple connectivity options, and a range of peripherals to support diverse projects.
+Unit Touchdot S3 is a development board based on the ESP32-S3 chip, designed for various applications including IoT, AI, and machine learning. It features a compact design, multiple connectivity options, and a range of peripherals to support diverse projects.
 
 ## Microcontroller: ESP32-S3 Mini
 - **Low Power Consumption**  
 - **With or Without PSRAM**  
   - _Without PSRAM_: Suitable for basic projects with sensors and actuators.    
 - **3.3 V Power Rail**  
-  Compatible with LilyPad, QWIIC low-voltage sensors and modules, enabling easy integration into weareble prototypes.
+  Compatible with Touchdot, QWIIC low-voltage sensors and modules, enabling easy integration into weareble prototypes.
 
 ---
 
@@ -31,6 +31,6 @@ Unit Lily S3 is a development board based on the ESP32-S3 chip, designed for var
 | ✅ **Distributed GND & 3.3 V Pads**               | Multiple solder points to power sensors and actuators without complex wiring.                                            |
 | ✅ **QWIIC Connector**                            | Standard SparkFun QWIIC I²C bus for rapid connection of compatible modules (sensors, displays, expansions).              |
 
-## UNIT LilyPad S3.
+## UNIT Touchdot S3.
 
-<a href="#"><img src="hardware/resources/lilypad.png" width="500px"><br/> UNIT LilyPad S3</a>
+<a href="#"><img src="hardware/resources/touchdot_top.jpg" width="450px"><br/> UNIT Touchdot S3</a>
