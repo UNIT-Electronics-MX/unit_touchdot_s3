@@ -1,6 +1,10 @@
-# Touchdot S3 Development board 
+## Touchdot S3 Development Board
 
-Touchdot S3 is a development board based on the ESP32-S3 chip, designed for various applications including IoT, AI, and machine learning. It features a compact design, multiple connectivity options, and a range of peripherals to support diverse projects.
+The Touchdot S3 is a development board based on the ESP32-S3 chip, designed for a wide range of applications such as IoT, controls, and smart devices. While it does not have the processing power to run advanced AI or machine learning models locally, it excels in versatility and ease of integration. Its compact, eye-catching design is inspired by Lilypad boards—though not identical—making it ideal for wearable and creative electronics projects. The Touchdot S3 features multiple connectivity options and a variety of peripherals, making it a great choice for rapid prototyping and embedded solutions.
+
+
+<a href="#"><img src="hardware/resources/touchdot_top.jpg" width="450px"><br/> UNIT Touchdot S3</a>
+
 
 ## Microcontroller: ESP32-S3 Mini
 - **Low Power Consumption**  
@@ -31,6 +35,4 @@ Touchdot S3 is a development board based on the ESP32-S3 chip, designed for vari
 | ✅ **Distributed GND & 3.3 V Pads**               | Multiple solder points to power sensors and actuators without complex wiring.                                            |
 | ✅ **QWIIC Connector**                            | Standard SparkFun QWIIC I²C bus for rapid connection of compatible modules (sensors, displays, expansions).              |
 
-## UNIT Touchdot S3.
 
-<a href="#"><img src="hardware/resources/touchdot_top.jpg" width="450px"><br/> UNIT Touchdot S3</a>
