@@ -24,12 +24,13 @@ Unit Lily S3 is a compact development board powered by the versatile ESP32-S3 ch
 ## Functional Description
 <!-- No features listed yet -->
 
-<!-- -  -->
+- (coming soon)
 
 ## Electrical Characteristics & Signal Overview
 
 <!-- No usage examples provided -->
 
+- (coming soon)
 
 ## Applications
 
@@ -83,7 +84,7 @@ Unit Lily S3 is a compact development board powered by the versatile ESP32-S3 ch
 
 Works with:
 
-- 
+- (coming soon)
 
 ## Downloads
 
