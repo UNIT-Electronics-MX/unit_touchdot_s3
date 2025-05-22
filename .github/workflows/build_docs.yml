@@ -34,6 +34,11 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-lang-english latexmk
 
+    - name: Validate README content
+      run: python test_readme.py
+      working-directory: software/documentation
+
+
     - name: Generate LaTeX from README
       run: |
         python generate_pdf.py
