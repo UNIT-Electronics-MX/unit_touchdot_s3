@@ -11,6 +11,10 @@ jobs:
   build-doc:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: software/documentation
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -38,4 +42,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: documentation-pdf
-        path: build/*.pdf
+        path: software/documentation/build/*.pdf
