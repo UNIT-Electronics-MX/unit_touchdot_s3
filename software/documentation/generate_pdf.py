@@ -158,7 +158,19 @@ def render_latex(template_path, output_path, replacements):
         f.write(tex)
 
 def compile_pdf(tex_file):
-    subprocess.run(['pdflatex', '-interaction=nonstopmode', f'-output-directory=build', tex_file], check=True)
+    try:
+        # Ejecutar pdflatex 2 veces para referencias y lastpage
+        for _ in range(2):
+            subprocess.run(
+                ['pdflatex', '-interaction=nonstopmode', '-output-directory=build', tex_file],
+                check=True
+            )
+    except subprocess.CalledProcessError as e:
+        print(f"LaTeX compilation failed with exit code {e.returncode}")
+        with open("build/" + os.path.splitext(os.path.basename(tex_file))[0] + ".log") as log:
+            print(log.read())
+        raise
+
 
 
 def clean_aux_files(output_name):
