@@ -43,9 +43,13 @@ def markdown_links_to_latex_list(text):
 
 def markdown_bullets_to_latex(text):
     lines = text.strip().splitlines()
-    items = [line.strip()[2:].strip() for line in lines if line.strip().startswith('-')]
+    items = [
+        line.strip()[2:].strip()
+        for line in lines
+        if line.strip().startswith('-') and len(line.strip()[2:].strip()) > 0
+    ]
     if not items:
-        return ""  # <- no genera entorno itemize si no hay items
+        return ""
     return "\\begin{itemize}\n" + "\n".join([f"\\item {item}" for item in items]) + "\n\\end{itemize}"
 
 
