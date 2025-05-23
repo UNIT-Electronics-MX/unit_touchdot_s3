@@ -82,7 +82,7 @@ Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S
 
 ## Block Diagram
 
-![Function Diagram](images/function-diagram.jpg)
+![Function Diagram](images/pinout.jpg)
 
 ## Dimensions
 
