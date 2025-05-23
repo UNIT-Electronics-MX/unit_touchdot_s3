@@ -18,7 +18,7 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 
 ## Introduction
 
-Unit Lily S3 is a compact development board powered by the versatile ESP32-S3 chip, engineered for IoT, AI, and machine learning applications. Its design integrates the efficient ESP32-S3 Mini microcontroller—with low power consumption and an optional PSRAM configuration—to support both basic sensor projects and advanced prototypes. Additionally, the 3.3V power rail facilitates seamless connectivity with low-voltage components such as LilyPad and QWIIC sensors.
+Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S3 chip, engineered for IoT, AI, and machine learning applications. Its design integrates the efficient ESP32-S3 Mini microcontroller—with low power consumption and an optional PSRAM configuration—to support both basic sensor projects and advanced prototypes. Additionally, the 3.3V power rail facilitates seamless connectivity with low-voltage components such as LilyPad and QWIIC sensors.
 
 ## Functional Description
 
