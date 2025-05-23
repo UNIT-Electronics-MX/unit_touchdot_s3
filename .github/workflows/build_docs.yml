@@ -11,10 +11,6 @@ jobs:
   build-doc:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: software/documentation
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -27,7 +23,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r software/documentation/requirements.txt
 
     - name: Install LaTeX
       run: |
@@ -36,24 +32,26 @@ jobs:
 
     - name: Validate README content
       run: python test_readme.py
+      working-directory: software/documentation
 
     - name: Generate LaTeX PDF
       run: python generate_pdf.py
+      working-directory: software/documentation
 
     - name: List generated files
-      run: ls -lh build
+      run: ls -lh software/documentation/build
 
-    - name: Scan PDF for secrets (basic)
+    - name: Scan PDF for secrets
       run: |
-        if grep -aEi 'AKIA|api[_-]?key|secret|token|Authorization|password' build/*.pdf; then
+        if grep -aEi 'AKIA|api[_-]?key|secret|token|Authorization|password' software/documentation/build/*.pdf; then
           echo "❌ Potential secret detected in PDF"
           exit 1
         fi
 
-    - name: Move PDF to docs/ for GitHub Pages
+    - name: Move PDF to root docs/ for GitHub Pages
       run: |
         mkdir -p docs
-        cp build/*.pdf docs/
+        cp software/documentation/build/*.pdf docs/
 
     - name: Commit and push PDF to docs/ (only on main)
       if: github.ref == 'refs/heads/main'
