@@ -41,14 +41,15 @@ jobs:
       run: python generate_pdf.py
       working-directory: software/documentation
 
-    - name: Compress PDF with Ghostscript (max compression)
+    - name: Compress PDF with Ghostscript (balanced quality)
       run: |
         original_pdf=$(ls build/*.pdf | head -n1)
-        gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen \
+        gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
            -dNOPAUSE -dQUIET -dBATCH \
            -sOutputFile=build/compressed.pdf "$original_pdf"
         mv build/compressed.pdf build/s3_development_board.pdf
       working-directory: software/documentation
+
 
     - name: List final PDF
       run: ls -lh software/documentation/build
