@@ -48,3 +48,9 @@ jobs:
       with:
         name: documentation-pdf
         path: software/documentation/build/*.pdf
+
+    - name: Move PDF to docs/ for GitHub Pages
+      run: |
+        mkdir -p docs
+        cp build/*.pdf docs/
+      working-directory: software/documentation
