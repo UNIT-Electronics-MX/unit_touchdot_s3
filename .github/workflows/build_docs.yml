@@ -36,21 +36,31 @@ jobs:
 
     - name: Validate README content
       run: python test_readme.py
-      working-directory: software/documentation
 
+    - name: Generate LaTeX PDF
+      run: python generate_pdf.py
 
-    - name: Generate LaTeX from README
+    - name: List generated files
+      run: ls -lh build
+
+    - name: Scan PDF for secrets (basic)
       run: |
-        python generate_pdf.py
-
-    - name: Archive generated PDF
-      uses: actions/upload-artifact@v4
-      with:
-        name: documentation-pdf
-        path: software/documentation/build/*.pdf
+        if grep -aEi 'AKIA|api[_-]?key|secret|token|Authorization|password' build/*.pdf; then
+          echo "❌ Potential secret detected in PDF"
+          exit 1
+        fi
 
     - name: Move PDF to docs/ for GitHub Pages
       run: |
         mkdir -p docs
         cp build/*.pdf docs/
-      working-directory: software/documentation
+
+    - name: Commit and push PDF to docs/ (only on main)
+      if: github.ref == 'refs/heads/main'
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git pull origin main
+        git add docs/*.pdf
+        git commit -m "Publish PDF documentation [skip ci]" || echo "No changes to commit"
+        git push origin main
