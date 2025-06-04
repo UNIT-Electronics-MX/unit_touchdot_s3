@@ -89,7 +89,7 @@ def format_images_with_titles(content):
             f"\\section*{{{title}}}\n"
             "\\vspace{1em}\n"
             "\\begin{center}\n"
-            f"\\includegraphics[width=0.75\\textwidth,keepaspectratio]{{{path}}}\n"
+            f"\\includegraphics[width=0.85\\textwidth,keepaspectratio]{{{path}}}\n"
             "\\end{center}\n"
         )
     return code
@@ -104,9 +104,18 @@ def parse_readme_md(path):
     frontmatter = yaml.safe_load(frontmatter_match.group(1)) if frontmatter_match else {}
     content = re.sub(r'^---.*?---\s*', '', content, flags=re.DOTALL)
 
-    image_paths = re.findall(r'!\[.*?\]\((.*?)\)', content)
-    image_product = next((img for img in image_paths if "product" in img.lower()), "")
-    other_images = [img for img in image_paths if img != image_product]
+    # image_paths = re.findall(r'!\[.*?\]\((.*?)\)', content)
+    # image_product = next((img for img in image_paths if "product" in img.lower()), "")
+    # other_images = [img for img in image_paths if img != image_product]
+
+    image_matches = re.findall(r'!\[(.*?)\]\((.*?)\)', content)
+    image_product = next((path for alt, path in image_matches if "product" in alt.lower()), "")
+    image_paths = [path for _, path in image_matches]
+    if not image_product and image_paths:
+        image_product = image_paths[0]
+        if not os.path.exists(image_product):
+            print(f"⚠️ Advertencia: La imagen principal no fue encontrada en la ruta: {image_product}")
+
 
     pin_table_match = re.search(r'## Pin.*?Layout\n((?:\|.*\n)+)', content)
     pin_table = markdown_table_to_latex(pin_table_match.group(1)) if pin_table_match else "No table."
@@ -162,21 +171,26 @@ def render_latex(template_path, output_path, replacements):
         tex = tex.replace(f'<<{key}>>', value)
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(tex)
-
+        
 def compile_pdf(tex_file):
     try:
-        # Ejecutar pdflatex 2 veces para referencias y lastpage
         for _ in range(2):
-            subprocess.run(
+            result = subprocess.run(
                 ['pdflatex', '-interaction=nonstopmode', '-output-directory=build', tex_file],
-                check=True
+                capture_output=True,
+                text=True,
+                encoding='utf-8',
+                errors='replace'  # <- esta línea soluciona el problema
             )
+            if result.returncode != 0:
+                print("⚠️ LaTeX compiló con errores:")
+                print(result.stdout)
+                print(result.stderr)
+                if not os.path.exists("build/" + os.path.splitext(os.path.basename(tex_file))[0] + ".pdf"):
+                    raise subprocess.CalledProcessError(result.returncode, result.args)
     except subprocess.CalledProcessError as e:
-        print(f"LaTeX compilation failed with exit code {e.returncode}")
-        with open("build/" + os.path.splitext(os.path.basename(tex_file))[0] + ".log") as log:
-            print(log.read())
+        print(f"❌ LaTeX falló con código {e.returncode}")
         raise
-
 
 
 def clean_aux_files(output_name):
