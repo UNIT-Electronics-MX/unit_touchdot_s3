@@ -162,7 +162,7 @@ html_theme = 'sphinx_book_theme'
 html_logo = "_static/touchdot.png"
 
 html_static_path = ['_static']
-latex_logo = "_static/logo.png" 
+latex_logo = "_static/touchdot.png" 
 html_css_files = [
     'custom.css',
 ]

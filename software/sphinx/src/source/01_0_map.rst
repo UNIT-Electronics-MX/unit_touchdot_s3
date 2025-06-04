@@ -1,12 +1,12 @@
 Main Pin Map 
 =================
 
-.. list-table:: Main Pin Map – ESP32-S3 LilyPad S3
+.. list-table:: Main Pin Map – ESP32-S3 TouchDot
    :header-rows: 1
    :widths: 15 25 10 40 8
 
    * - Arduino LilyPAD
-     - UNIT LilyPad S3
+     - UNIT TouchDot S3
      - ESP32-S3 GPIO
      - GPIO Function
      - Type
@@ -150,3 +150,275 @@ Main Pin Map
      - GPIO8
      - RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1
      - I/O/T
+
+
+
+
+.. list-table:: QWIIC-Compatible JST Connector
+   :header-rows: 1
+   :widths: 8 15 15 10 40
+
+   * - Pin
+     - JST Function
+     - Arduino Compatibility
+     - ESP32-S3 GPIO
+     - GPIO Function
+   * - 1
+     - GND
+     - GND
+     - GND
+     - GND
+   * - 2
+     - 3.3V
+     - 3.3V
+     - 3.3V
+     - 3.3V
+   * - 3
+     - SDA / MUX IO
+     - A4
+     - GPIO5
+     - RTC_GPIO5, GPIO5, TOUCH5, ADC1_CH4
+   * - 4
+     - SCL / MUX IO
+     - A5
+     - GPIO6
+     - RTC_GPIO6, GPIO6, TOUCH6, ADC1_CH5
+
+
+
+.. list-table:: JTAG Test Points
+   :header-rows: 1
+   :widths: 15 15 10 40 8
+
+   * - Function
+     - Arduino Pin
+     - ESP32-S3 GPIO
+     - GPIO Function
+     - Type
+   * - MTCK
+     - D21
+     - GPIO39
+     - MTCK, GPIO39, CLK_OUT3, SUBSPICS1
+     - I/O/T
+   * - MTDO
+     - D22
+     - GPIO40
+     - MTDO, GPIO40, CLK_OUT2
+     - I/O/T
+   * - MTDI
+     - D23
+     - GPIO41
+     - MTDI, GPIO41, CLK_OUT1
+     - I/O/T
+   * - MTMS
+     - D24
+     - GPIO42
+     - MTMS, GPIO42
+     - I/O/T
+   * - GND1
+     - GND
+     - GND
+     - GND
+     - GND
+   * - TP_3V3
+     - 3.3V
+     - Power Supply
+     - P (3.3V)
+     - P
+
+
+
+.. list-table:: Serial Programming Header (1x6)
+   :header-rows: 1
+   :widths: 6 15 20 10 40 8
+
+   * - Pin
+     - JST Function
+     - Arduino Compatibility
+     - ESP32-S3 GPIO
+     - GPIO Function
+     - Type
+   * - 1
+     - GND
+     - GND
+     - GND
+     - GND
+     - GND
+   * - 2
+     - EN
+     - RESET
+     - EN
+     - High: ON, enables chip; Low: powers off
+     - I
+   * - 3
+     - 3.3V
+     - 3.3V
+     - 3.3V
+     - 3.3V
+     - P
+   * - 4
+     - TX0
+     - D1
+     - GPIO43
+     - U0TXD, GPIO43, CLK_OUT1
+     - I/O/T
+   * - 5
+     - RX0
+     - D0
+     - GPIO44
+     - U0RXD, GPIO44, CLK_OUT2
+     - I/O/T
+   * - 6
+     - BOOT
+     - D29
+     - GPIO0
+     - RTC_GPIO0, GPIO0
+     - I/O/T
+
+
+
+
+.. list-table:: Expansion Header (2x6)
+   :header-rows: 1
+   :widths: 6 20 20 12 40 8
+
+   * - Pin
+     - Function
+     - Arduino Pin
+     - ESP32-S3 GPIO
+     - GPIO Function
+     - Type
+   * - 1
+     - 3.3V
+     - 3.3V
+     - -
+     - Power Supply
+     - P
+   * - 2
+     - GND
+     - GND
+     - -
+     - Ground
+     - GND
+   * - 3
+     - GPIO33
+     - D15
+     - GPIO33
+     - SPIIO4, GPIO33, FSPIHD, SUBSPIHD
+     - I/O/T
+   * - 4
+     - GPIO34
+     - D16
+     - GPIO34
+     - SPIIO5, FSPICS0, SUBSPICS0
+     - I/O/T
+   * - 5
+     - GPIO35
+     - D17
+     - GPIO35
+     - SPIIO6, FSPID, SUBSPID
+     - I/O/T
+   * - 6
+     - GPIO36
+     - D18
+     - GPIO36
+     - SPIIO7, FSPICLK, SUBSPICLK
+     - I/O/T
+   * - 7
+     - GPIO37
+     - D19
+     - GPIO37
+     - SPIDQS, FSPIQ, SUBSPIQ
+     - I/O/T
+   * - 8
+     - GPIO38
+     - D20
+     - GPIO38
+     - GPIO38, FSPIWP, SUBSPIWP
+     - I/O/T
+   * - 9
+     - GPIO47 / PDM_DATA
+     - D27
+     - GPIO47
+     - SPICLK_P_DIFF, SUBSPICLK_P_DIFF
+     - I/O/T
+   * - 10
+     - GPIO48 / PDM_CLK
+     - D28
+     - GPIO48
+     - SPICLK_N_DIFF, SUBSPICLK_N_DIFF
+     - I/O/T
+   * - 11
+     - 5V
+     - 5V
+     - -
+     - Power Supply
+     - P
+   * - 12
+     - GND
+     - GND
+     - -
+     - Ground
+     - GND
+
+
+
+
+.. list-table:: microSD Connector (SPI Mode)
+   :header-rows: 1
+   :widths: 6 20 20 12 40 8
+
+   * - Pin
+     - microSD Pin Name
+     - SPI Function
+     - ESP32-S3 GPIO
+     - GPIO Function
+     - Type
+   * - 1
+     - DAT2
+     - Not used in SPI
+     - -
+     - -
+     - -
+   * - 2
+     - CD / DAT3
+     - CS (Chip Select)
+     - GPIO21
+     - RTC_GPIO2, GPIO21
+     - I/O/T
+   * - 3
+     - CMD
+     - MOSI
+     - GPIO9
+     - RTC_GPIO9, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD
+     - I/O/T
+   * - 4
+     - VDD
+     - 3.3V
+     - 3.3V
+     - Power Supply
+     - P
+   * - 5
+     - CLK
+     - SCLK
+     - GPIO7
+     - RTC_GPIO7, TOUCH7, ADC1_CH6
+     - I/O/T
+   * - 6
+     - VSS
+     - GND
+     - GND
+     - Ground
+     - GND
+   * - 7
+     - DAT0
+     - MISO
+     - GPIO8
+     - RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1
+     - I/O/T
+   * - 8
+     - DAT1
+     - Not used in SPI
+     - -
+     - -
+     - -
