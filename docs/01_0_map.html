@@ -389,7 +389,7 @@ document.write(`
   <section id="main-pin-map">
 <h1>Main Pin Map<a class="headerlink" href="#main-pin-map" title="Link to this heading">#</a></h1>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Main Pin Map – ESP32-S3 LilyPad S3</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Main Pin Map – ESP32-S3 TouchDot</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 15.3%" />
 <col style="width: 25.5%" />
@@ -399,7 +399,7 @@ document.write(`
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino LilyPAD</p></th>
-<th class="head"><p>UNIT LilyPad S3</p></th>
+<th class="head"><p>UNIT TouchDot S3</p></th>
 <th class="head"><p>ESP32-S3 GPIO</p></th>
 <th class="head"><p>GPIO Function</p></th>
 <th class="head"><p>Type</p></th>
@@ -594,6 +594,389 @@ document.write(`
 <td><p>GPIO8</p></td>
 <td><p>RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1</p></td>
 <td><p>I/O/T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">QWIIC-Compatible JST Connector</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 9.1%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 11.4%" />
+<col style="width: 45.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>JST Function</p></th>
+<th class="head"><p>Arduino Compatibility</p></th>
+<th class="head"><p>ESP32-S3 GPIO</p></th>
+<th class="head"><p>GPIO Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>SDA / MUX IO</p></td>
+<td><p>A4</p></td>
+<td><p>GPIO5</p></td>
+<td><p>RTC_GPIO5, GPIO5, TOUCH5, ADC1_CH4</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>SCL / MUX IO</p></td>
+<td><p>A5</p></td>
+<td><p>GPIO6</p></td>
+<td><p>RTC_GPIO6, GPIO6, TOUCH6, ADC1_CH5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">JTAG Test Points</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 11.4%" />
+<col style="width: 45.5%" />
+<col style="width: 9.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Arduino Pin</p></th>
+<th class="head"><p>ESP32-S3 GPIO</p></th>
+<th class="head"><p>GPIO Function</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MTCK</p></td>
+<td><p>D21</p></td>
+<td><p>GPIO39</p></td>
+<td><p>MTCK, GPIO39, CLK_OUT3, SUBSPICS1</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>MTDO</p></td>
+<td><p>D22</p></td>
+<td><p>GPIO40</p></td>
+<td><p>MTDO, GPIO40, CLK_OUT2</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>MTDI</p></td>
+<td><p>D23</p></td>
+<td><p>GPIO41</p></td>
+<td><p>MTDI, GPIO41, CLK_OUT1</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>MTMS</p></td>
+<td><p>D24</p></td>
+<td><p>GPIO42</p></td>
+<td><p>MTMS, GPIO42</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>GND1</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>TP_3V3</p></td>
+<td><p>3.3V</p></td>
+<td><p>Power Supply</p></td>
+<td><p>P (3.3V)</p></td>
+<td><p>P</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Serial Programming Header (1x6)</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 6.1%" />
+<col style="width: 15.2%" />
+<col style="width: 20.2%" />
+<col style="width: 10.1%" />
+<col style="width: 40.4%" />
+<col style="width: 8.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>JST Function</p></th>
+<th class="head"><p>Arduino Compatibility</p></th>
+<th class="head"><p>ESP32-S3 GPIO</p></th>
+<th class="head"><p>GPIO Function</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>EN</p></td>
+<td><p>RESET</p></td>
+<td><p>EN</p></td>
+<td><p>High: ON, enables chip; Low: powers off</p></td>
+<td><p>I</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><p>P</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>TX0</p></td>
+<td><p>D1</p></td>
+<td><p>GPIO43</p></td>
+<td><p>U0TXD, GPIO43, CLK_OUT1</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>RX0</p></td>
+<td><p>D0</p></td>
+<td><p>GPIO44</p></td>
+<td><p>U0RXD, GPIO44, CLK_OUT2</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>BOOT</p></td>
+<td><p>D29</p></td>
+<td><p>GPIO0</p></td>
+<td><p>RTC_GPIO0, GPIO0</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Expansion Header (2x6)</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 5.7%" />
+<col style="width: 18.9%" />
+<col style="width: 18.9%" />
+<col style="width: 11.3%" />
+<col style="width: 37.7%" />
+<col style="width: 7.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Arduino Pin</p></th>
+<th class="head"><p>ESP32-S3 GPIO</p></th>
+<th class="head"><p>GPIO Function</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Power Supply</p></td>
+<td><p>P</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Ground</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>GPIO33</p></td>
+<td><p>D15</p></td>
+<td><p>GPIO33</p></td>
+<td><p>SPIIO4, GPIO33, FSPIHD, SUBSPIHD</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>GPIO34</p></td>
+<td><p>D16</p></td>
+<td><p>GPIO34</p></td>
+<td><p>SPIIO5, FSPICS0, SUBSPICS0</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>GPIO35</p></td>
+<td><p>D17</p></td>
+<td><p>GPIO35</p></td>
+<td><p>SPIIO6, FSPID, SUBSPID</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>GPIO36</p></td>
+<td><p>D18</p></td>
+<td><p>GPIO36</p></td>
+<td><p>SPIIO7, FSPICLK, SUBSPICLK</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>GPIO37</p></td>
+<td><p>D19</p></td>
+<td><p>GPIO37</p></td>
+<td><p>SPIDQS, FSPIQ, SUBSPIQ</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>GPIO38</p></td>
+<td><p>D20</p></td>
+<td><p>GPIO38</p></td>
+<td><p>GPIO38, FSPIWP, SUBSPIWP</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>GPIO47 / PDM_DATA</p></td>
+<td><p>D27</p></td>
+<td><p>GPIO47</p></td>
+<td><p>SPICLK_P_DIFF, SUBSPICLK_P_DIFF</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>GPIO48 / PDM_CLK</p></td>
+<td><p>D28</p></td>
+<td><p>GPIO48</p></td>
+<td><p>SPICLK_N_DIFF, SUBSPICLK_N_DIFF</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>5V</p></td>
+<td><p>5V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Power Supply</p></td>
+<td><p>P</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Ground</p></td>
+<td><p>GND</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table" id="id6">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">microSD Connector (SPI Mode)</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 5.7%" />
+<col style="width: 18.9%" />
+<col style="width: 18.9%" />
+<col style="width: 11.3%" />
+<col style="width: 37.7%" />
+<col style="width: 7.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>microSD Pin Name</p></th>
+<th class="head"><p>SPI Function</p></th>
+<th class="head"><p>ESP32-S3 GPIO</p></th>
+<th class="head"><p>GPIO Function</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>DAT2</p></td>
+<td><p>Not used in SPI</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>CD / DAT3</p></td>
+<td><p>CS (Chip Select)</p></td>
+<td><p>GPIO21</p></td>
+<td><p>RTC_GPIO2, GPIO21</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>CMD</p></td>
+<td><p>MOSI</p></td>
+<td><p>GPIO9</p></td>
+<td><p>RTC_GPIO9, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>VDD</p></td>
+<td><p>3.3V</p></td>
+<td><p>3.3V</p></td>
+<td><p>Power Supply</p></td>
+<td><p>P</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>CLK</p></td>
+<td><p>SCLK</p></td>
+<td><p>GPIO7</p></td>
+<td><p>RTC_GPIO7, TOUCH7, ADC1_CH6</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>VSS</p></td>
+<td><p>GND</p></td>
+<td><p>GND</p></td>
+<td><p>Ground</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>DAT0</p></td>
+<td><p>MISO</p></td>
+<td><p>GPIO8</p></td>
+<td><p>RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1</p></td>
+<td><p>I/O/T</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>DAT1</p></td>
+<td><p>Not used in SPI</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
