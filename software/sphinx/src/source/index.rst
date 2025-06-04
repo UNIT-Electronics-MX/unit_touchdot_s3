@@ -17,6 +17,7 @@ TouchDot development board
    :caption: Contents
 
    00_1_terms
+   01_0_map
 
    
    report
