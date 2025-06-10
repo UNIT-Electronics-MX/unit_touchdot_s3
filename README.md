@@ -10,7 +10,6 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 ### Microcontroller: ESP32-S3 Mini
 
 - **Energy Efficient:** Optimized for low power consumption.
-- **Flexible Memory Options:** Available with or without PSRAM to match project complexity.
 - **3.3 V Power Rail:** Compatible with wearable sensors and peripherals like QWIIC modules.
 
 ### Power Supply & Battery Management
@@ -23,7 +22,6 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 
 | Feature                                   | Description                                                                                                      |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| **USB-C Connectivity**                    | Fast charging and USB-based OTA firmware updates.                                                                |
 | **Wi-Fi & Bluetooth LE**                   | Dual wireless connectivity for seamless IoT and mobile interactions.                                             |
 | **Built-in LiPo Charging**                 | Reliable battery charging integrated into the board design.                                                      |
 | **Power & Reset Controls**                 | Direct access to board power management with dedicated buttons for power and reset.                               |

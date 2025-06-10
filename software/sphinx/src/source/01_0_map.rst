@@ -1,5 +1,46 @@
-Main Pin Map 
-=================
+Pinout Distribution
+====================
+
+Squematic Diagram
+-----------------
+
+.. raw:: html
+
+   <div style="text-align: center;">
+      <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf', '_blank')">TouchDot S3</button>
+   </div>
+   <br> </br>
+   <iframe src="./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
+   <br> </br>
+
+Pinout  distribution
+--------------------
+
+.. raw:: html
+
+    <div style="text-align: center;">
+
+
+        <br><br>
+
+        <!-- Imagen que se puede abrir en una nueva ventana al hacer clic -->
+        <a href="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" target="_blank">
+            <img 
+                src="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" 
+                alt="TouchDot S3 Pinout" 
+                style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+            >
+        </a>
+
+        <br><br>
+
+    </div>
+
+
+
+
+The following table provides the pinout details for the **TouchDot** and ESP32 S3 boards.
+
 
 .. list-table:: Main Pin Map – ESP32-S3 TouchDot
    :header-rows: 1
@@ -364,61 +405,3 @@ Main Pin Map
 
 
 
-.. list-table:: microSD Connector (SPI Mode)
-   :header-rows: 1
-   :widths: 6 20 20 12 40 8
-
-   * - Pin
-     - microSD Pin Name
-     - SPI Function
-     - ESP32-S3 GPIO
-     - GPIO Function
-     - Type
-   * - 1
-     - DAT2
-     - Not used in SPI
-     - -
-     - -
-     - -
-   * - 2
-     - CD / DAT3
-     - CS (Chip Select)
-     - GPIO21
-     - RTC_GPIO2, GPIO21
-     - I/O/T
-   * - 3
-     - CMD
-     - MOSI
-     - GPIO9
-     - RTC_GPIO9, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD
-     - I/O/T
-   * - 4
-     - VDD
-     - 3.3V
-     - 3.3V
-     - Power Supply
-     - P
-   * - 5
-     - CLK
-     - SCLK
-     - GPIO7
-     - RTC_GPIO7, TOUCH7, ADC1_CH6
-     - I/O/T
-   * - 6
-     - VSS
-     - GND
-     - GND
-     - Ground
-     - GND
-   * - 7
-     - DAT0
-     - MISO
-     - GPIO8
-     - RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1
-     - I/O/T
-   * - 8
-     - DAT1
-     - Not used in SPI
-     - -
-     - -
-     - -
