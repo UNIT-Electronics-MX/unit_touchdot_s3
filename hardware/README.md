@@ -1,6 +1,6 @@
 # Hardware
 
-<a href="#"><img src="resources/Schematics_icon.jpg?raw=false" width="500px"><br/>Schematics</a>
+<a href="./unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf"><img src="resources/Schematics_icon.jpg?raw=false" width="500px"><br/>Schematics</a>
 
 ---
 
@@ -15,6 +15,12 @@
 | **TouchPad**  | T1 to T11          | Capacitive sensors for touch detection |
 | **Analog**    | A0 to A8           | 12-bit (0–4095) resolution             |
 | **SPI**       | Optional           | Displays, additional memory            |
+
+---
+
+## Dimensions
+
+<a href="#"><img src="./resources/unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png" width="500px"><br/>Dimension</a>
 
 ---
 
