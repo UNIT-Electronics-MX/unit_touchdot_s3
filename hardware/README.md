@@ -1,12 +1,18 @@
 # Hardware
 
+<div align="center">
+
 <a href="./unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf"><img src="resources/Schematics_icon.jpg?raw=false" width="500px"><br/>Schematics</a>
+
+</div>
 
 ---
 
 ## PINOUT
 
-<a href="#"><img src="resources/touchdot_pinout.jpg" width="500px"><br/>Pinout</a>
+<div align="center">
+    <a href="#"><img src="resources/unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png" width="500px"><br/>Pinout</a>
+
 
 | **Group**     | **Available Pins** | **Suggested Use**                      |
 |---------------|--------------------|----------------------------------------|
@@ -16,15 +22,22 @@
 | **Analog**    | A0 to A8           | 12-bit (0–4095) resolution             |
 | **SPI**       | Optional           | Displays, additional memory            |
 
+</div>
+
 ---
 
 ## Dimensions
 
+<div align="center">
+
 <a href="#"><img src="./resources/unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png" width="500px"><br/>Dimension</a>
+</div>
 
 ---
 
 ## Topology
+
+<div align="center">
 
 <a href="#"><img src="./resources/unit_topology_V_0_1_2_ue0072_Touch-Dot-S3.png" width="500px"><br/>Topology</a>
 
@@ -48,3 +61,5 @@
 | JP2   | Sewable Pads                                                                |
 | JP3   | GPIO, system, and power supply pin headers                                  |
 | JP4   | GPIO, system, and power supply pin headers                                  |
+
+</div>
