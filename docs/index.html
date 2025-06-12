@@ -55,7 +55,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Terms, Acknowledgments, and Licenses" href="00_1_terms.html" />
+    <link rel="next" title="Hardware License (MIT)" href="00_1_terms.html" />
     <link rel="icon" href="_static/icon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
 
@@ -170,8 +170,17 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00_1_terms.html">Terms, Acknowledgments, and Licenses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Main Pin Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_1_terms.html">Hardware License (MIT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Pinout Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
 
@@ -394,18 +403,114 @@ document.write(`
 <p>This documentation is actively evolving. For the latest updates and revisions,
 please visit the project’s GitHub repository.</p>
 </div>
+<p>Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.</p>
+<p><strong>Microcontroller: ESP32-S3 Mini</strong></p>
+<ul class="simple">
+<li><p><strong>Energy Efficient:</strong> Optimized for low power consumption.</p></li>
+<li><p><strong>3.3 V Power Rail:</strong> Compatible with wearable sensors and peripherals like QWIIC modules.</p></li>
+</ul>
+<p><strong>Power Supply &amp; Battery Management</strong></p>
+<ul class="simple">
+<li><p><strong>USB-C Charging &amp; Communication:</strong> Ensures reliable power delivery and straightforward programming.</p></li>
+<li><p><strong>Integrated LiPo Battery Management:</strong> Streamlines power safety and efficiency without extra circuitry.</p></li>
+<li><p><strong>Distributed Power Pads:</strong> Magnetic connectors deliver <strong>GND</strong> and <strong>3.3 V</strong> for simple, reliable wiring to sensors and actuators.</p></li>
+</ul>
+<p><strong>Key Features</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Wi-Fi &amp; Bluetooth LE</p></td>
+<td><p>Dual wireless connectivity for seamless IoT and mobile interactions.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Built-in LiPo Charging</p></td>
+<td><p>Reliable battery charging integrated into the board design.</p></td>
+</tr>
+<tr class="row-even"><td><p>Power &amp; Reset Controls</p></td>
+<td><p>Direct access to board power management with dedicated buttons for power and reset.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sewable Pads &amp; Magnetic Connectors</p></td>
+<td><p>Ideal for wearable projects and rapid prototyping with flexible module integration.</p></td>
+</tr>
+<tr class="row-even"><td><p>Multiple Solder Points for GND &amp; 3.3 V</p></td>
+<td><p>Facilitates easy wiring to external sensors or actuators without complex setup.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Standard QWIIC Connector</p></td>
+<td><p>Supports quick connection of I²C peripherals such as sensors, displays, and expansion modules.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="00_1_terms.html">Terms, Acknowledgments, and Licenses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="00_1_terms.html#terms-and-conditions">Terms and Conditions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00_1_terms.html#acknowledgments-and-contributors">Acknowledgments and Contributors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00_1_terms.html#hardware-license">Hardware License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00_1_terms.html#resources-and-references">Resources and References</a></li>
-<li class="toctree-l2"><a class="reference internal" href="00_1_terms.html#licenses">Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_1_terms.html">Hardware License (MIT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Pinout Distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_0_map.html#development-board-description">Development Board Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_0_map.html#squematic-diagram">Squematic Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_0_map.html#id1">Pinout  distribution</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Main Pin Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#install-the-required-software">Install the required software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#python-3-7-or-later">Python 3.7 or later</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#git">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#mingw">MinGW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#visual-studio-code">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#arduino-ide-installation">Arduino IDE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#thonny-ide-installation">Thonny IDE Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_lib.html#installation-guide-using-mip-library">Installation Guide Using MIP Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_lib.html#dualmcu-library">DualMCU Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_lib.html#libraries-available">Libraries available</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_1_esp-idf.html#installation-steps">Installation Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_1_esp-idf.html#customizing-the-installation-path">Customizing the Installation Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_1_esp-idf.html#first-steps-with-esp-idf">First Steps with ESP-IDF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_gpio.html#working-with-leds-on-esp32-s3">Working with LEDs on ESP32-S3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#adc-definition">ADC Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#adc-pin-mapping">ADC Pin Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#class-adc">Class ADC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#example-definition">Example Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#reading-values">Reading Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#example-code">Example Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#i2c-overview">I2C Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#pinout-details">Pinout Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#scanning-for-i2c-devices">Scanning for I2C Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#ssd1306-display">SSD1306 Display</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="44_spi.html#spi-overview">SPI Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="44_spi.html#sdcard-spi">SDCard SPI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="55_WS2812.html#code-example">Code Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="66_communication.html#wi-fi">Wi-Fi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="66_communication.html#bluetooth">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="66_communication.html#serial">Serial</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="report.html#steps-to-create-an-error-report">Steps to Create an Error Report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="report.html#review-and-follow-up">Review and Follow-Up</a></li>
@@ -431,7 +536,7 @@ please visit the project’s GitHub repository.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Terms, Acknowledgments, and Licenses</p>
+        <p class="prev-next-title">Hardware License (MIT)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

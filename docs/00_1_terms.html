@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Terms, Acknowledgments, and Licenses &#8212; Touchdot  User Guide and Technical Reference 0.0.1 documentation</title>
+    <title>Hardware License (MIT) &#8212; Touchdot  User Guide and Technical Reference 0.0.1 documentation</title>
   
   
   
@@ -55,7 +55,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '00_1_terms';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Main Pin Map" href="01_0_map.html" />
+    <link rel="next" title="Pinout Distribution" href="01_0_map.html" />
     <link rel="prev" title="TouchDot development board" href="index.html" />
     <link rel="icon" href="_static/icon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
@@ -169,8 +169,17 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Terms, Acknowledgments, and Licenses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Main Pin Map</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hardware License (MIT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Pinout Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
 
@@ -361,9 +370,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -374,33 +381,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Terms, Acknowledgments, and Licenses</h1>
+    <h1>Hardware License (MIT)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terms-and-conditions">Terms and Conditions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments-and-contributors">Acknowledgments and Contributors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmsis-dap-daplink-firmware-for-ch552">CMSIS-DAP (DAPLink Firmware for CH552)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usb-blaster-firmware-ch552g">USB-Blaster Firmware (CH552G)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-license">Hardware License</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-and-references">Resources and References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licenses">Licenses</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-visual-content">Documentation &amp; Visual Content</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware-projects">Firmware Projects</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-repository">Hardware Repository</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preloaded-usb-serial-firmware">Preloaded USB-Serial Firmware</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -410,126 +395,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="terms-acknowledgments-and-licenses">
-<h1>Terms, Acknowledgments, and Licenses<a class="headerlink" href="#terms-acknowledgments-and-licenses" title="Link to this heading">#</a></h1>
-<section id="terms-and-conditions">
-<h2>Terms and Conditions<a class="headerlink" href="#terms-and-conditions" title="Link to this heading">#</a></h2>
-<p>By using, modifying, or distributing the documentation, firmware, or hardware designs included in this repository, you agree to the following terms:</p>
+  <section id="hardware-license-mit">
+<h1>Hardware License (MIT)<a class="headerlink" href="#hardware-license-mit" title="Link to this heading">#</a></h1>
+<p>Copyright (c) 2025 UNIT Electronics</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this hardware design and associated documentation files (the “Hardware”),
+to deal in the Hardware without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Hardware, and to permit persons to whom the Hardware is
+furnished to do so, subject to the following conditions:</p>
 <ul class="simple">
-<li><p>All materials are provided <strong>“as-is”</strong>, without warranty of any kind.</p></li>
-<li><p>The authors and contributors shall not be held responsible for <strong>any damages</strong>, data loss, or legal issues arising from the use of these materials.</p></li>
-<li><p>Usage is intended for <strong>educational, development, prototyping</strong>, and other lawful purposes.</p></li>
-<li><p>When redistributing or reusing any part of this project, you must <strong>retain attribution</strong> and comply with the corresponding license terms of each component.</p></li>
+<li><p>The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Hardware and associated documentation.</p></li>
+<li><p>Proper attribution must be given to the original authors when reusing,
+modifying, or redistributing the Hardware.</p></li>
 </ul>
-</section>
-<section id="acknowledgments-and-contributors">
-<h2>Acknowledgments and Contributors<a class="headerlink" href="#acknowledgments-and-contributors" title="Link to this heading">#</a></h2>
-<p>This project builds upon the work of several open-source developers and projects:</p>
-<section id="cmsis-dap-daplink-firmware-for-ch552">
-<h3>CMSIS-DAP (DAPLink Firmware for CH552)<a class="headerlink" href="#cmsis-dap-daplink-firmware-for-ch552" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Stefan Wagner</strong>
-Project: <a class="reference external" href="https://github.com/wagiminator/CH552-DAPLink">CH552-DAPLink</a>
-License: Creative Commons BY-SA 3.0
-Description: CMSIS-DAP firmware and hardware design</p></li>
-<li><p><strong>Ralph Doncaster</strong>
-Source: <a class="reference external" href="https://github.com/nerdralph/ch554_sdcc">nerdralph/ch554_sdcc</a>
-Description: Original CMSIS-DAP firmware implementation for CH554 (SDCC)</p></li>
-<li><p><strong>Deqing Sun</strong>
-Source: <a class="reference external" href="https://github.com/DeqingSun/ch55xduino">CH55xduino</a>
-Description: CH552/CH554 Arduino-compatible toolchain</p></li>
-</ul>
-</section>
-<section id="usb-blaster-firmware-ch552g">
-<h3>USB-Blaster Firmware (CH552G)<a class="headerlink" href="#usb-blaster-firmware-ch552g" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Vladimir Duan</strong>
-Project: <a class="reference external" href="https://github.com/VladimirDuan/CH55x-USB-Blaster">CH55x-USB-Blaster</a>
-License: MIT
-Description: USB-Blaster JTAG emulation for CH55x</p></li>
-<li><p><strong>Blinkinlabs</strong>
-SDK Source: <a class="reference external" href="https://github.com/Blinkinlabs/ch554_sdcc">ch554_sdcc</a>
-Description: SDK for CH552/CH554 (SDCC)</p></li>
-<li><p><strong>Doug Brown</strong>
-Blog: <a class="reference external" href="https://www.downtowndougbrown.com/2024/06/fixing-a-knockoff-altera-usb-blaster-that-never-worked/">Fixing a Knockoff Altera USB Blaster</a>
-Description: Insights into compatibility and firmware flashing</p></li>
-</ul>
-</section>
-</section>
-<section id="hardware-license">
-<h2>Hardware License<a class="headerlink" href="#hardware-license" title="Link to this heading">#</a></h2>
-<p>All hardware designs (schematics, layouts, and design files) in this repository are released under the <strong>MIT License</strong>, allowing unrestricted use, modification, and distribution, provided the original license and attribution are retained.</p>
-</section>
-<section id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Source URLs</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
-<thead>
-<tr class="row-odd"><th class="head"><p>Project / Tool</p></th>
-<th class="head"><p>Source URL</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>CH552 DAPLink</p></td>
-<td><p><a class="github reference external" href="https://github.com/wagiminator/CH552-DAPLink">wagiminator/CH552-DAPLink</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>picoDAP</p></td>
-<td><p><a class="github reference external" href="https://github.com/wagiminator/CH552-picoDAP">wagiminator/CH552-picoDAP</a></p></td>
-</tr>
-<tr class="row-even"><td><p>CH55xDuino</p></td>
-<td><p><a class="github reference external" href="https://github.com/DeqingSun/ch55xduino">DeqingSun/ch55xduino</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>CMSIS-DAP Handbook</p></td>
-<td><p><a class="reference external" href="https://os.mbed.com/handbook/CMSIS-DAP">https://os.mbed.com/handbook/CMSIS-DAP</a></p></td>
-</tr>
-<tr class="row-even"><td><p>CH55x USB-Blaster</p></td>
-<td><p><a class="github reference external" href="https://github.com/VladimirDuan/CH55x-USB-Blaster">VladimirDuan/CH55x-USB-Blaster</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>SDCC Compiler</p></td>
-<td><p><a class="reference external" href="https://sdcc.sourceforge.net/">https://sdcc.sourceforge.net/</a></p></td>
-</tr>
-<tr class="row-even"><td><p>CH554 SDK</p></td>
-<td><p><a class="github reference external" href="https://github.com/Blinkinlabs/ch554_sdcc">Blinkinlabs/ch554_sdcc</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="licenses">
-<h2>Licenses<a class="headerlink" href="#licenses" title="Link to this heading">#</a></h2>
-<section id="documentation-visual-content">
-<h3>Documentation &amp; Visual Content<a class="headerlink" href="#documentation-visual-content" title="Link to this heading">#</a></h3>
-<p>This user guide and its visual content are licensed under:</p>
-<p><strong>Creative Commons Attribution-ShareAlike 3.0 Unported License</strong></p>
-<a class="reference external image-reference" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
-</section>
-<section id="firmware-projects">
-<h3>Firmware Projects<a class="headerlink" href="#firmware-projects" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>CH552-DAPLink</strong>: Creative Commons BY-SA 3.0 — © Stefan Wagner</p></li>
-<li><p><strong>CH55x-USB-Blaster</strong>: MIT License — © Vladimir Duan</p></li>
-<li><p><strong>CH55x SDK / Tools</strong>: MIT License — © Blinkinlabs</p></li>
-</ul>
-</section>
-<section id="hardware-repository">
-<h3>Hardware Repository<a class="headerlink" href="#hardware-repository" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>All PCB designs and schematics are released under the <strong>MIT License</strong>.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you distribute this product with third-party firmware (e.g., CMSIS-DAP), you are responsible for ensuring license compliance. Only firmware developed by Unit Electronics and released under the MIT license is supported for commercial redistribution.</p>
-</div>
-</section>
-<section id="preloaded-usb-serial-firmware">
-<h3>Preloaded USB-Serial Firmware<a class="headerlink" href="#preloaded-usb-serial-firmware" title="Link to this heading">#</a></h3>
-<p>This product may include preloaded firmware based on the project by <strong>Kongou Hikari</strong>:
-“USB to Serial Converter firmware for CH552T”.
-Original source: <em>[https://github.com/diodep/ch55x_dualserial/tree/master]</em>
-License: MIT</p>
-<p>Under the terms of the MIT License, users are free to modify or replace the firmware. Unit Electronics provides this firmware for convenience only and does not offer performance guarantees.</p>
-</section>
-</section>
+<p>THE HARDWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+HARDWARE OR THE USE OR OTHER DEALINGS IN THE HARDWARE.</p>
 </section>
 
 
@@ -557,7 +443,7 @@ License: MIT</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Main Pin Map</p>
+        <p class="prev-next-title">Pinout Distribution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -567,35 +453,6 @@ License: MIT</p>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terms-and-conditions">Terms and Conditions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments-and-contributors">Acknowledgments and Contributors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmsis-dap-daplink-firmware-for-ch552">CMSIS-DAP (DAPLink Firmware for CH552)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usb-blaster-firmware-ch552g">USB-Blaster Firmware (CH552G)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-license">Hardware License</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-and-references">Resources and References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licenses">Licenses</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-visual-content">Documentation &amp; Visual Content</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firmware-projects">Firmware Projects</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-repository">Hardware Repository</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preloaded-usb-serial-firmware">Preloaded USB-Serial Firmware</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

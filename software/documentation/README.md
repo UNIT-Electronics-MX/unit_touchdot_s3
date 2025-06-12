@@ -14,7 +14,7 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 
 # ESP32-S3 Development Board 
 
-![product](./images/product.jpg)
+![product](./images/top.png)
 
 ## Introduction
 
@@ -82,11 +82,11 @@ Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S
 
 ## Block Diagram
 
-![Function Diagram](images/pinout.jpg)
+![Function Diagram](images/pinout.png)
 
 ## Dimensions
 
-![Dimensions](images/dimensions.jpg)
+![Dimensions](images/dimension.png)
 
 ## Usage
 

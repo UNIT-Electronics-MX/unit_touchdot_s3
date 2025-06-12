@@ -148,6 +148,15 @@ latex_elements = {
   \thispagestyle{empty}
   \clearpage
 }
+\usepackage{etoolbox}
+
+% Antes de cada longtable: cambiar a una columna
+\AtBeginEnvironment{longtable}{\onecolumn}
+% Después de cada longtable: volver a dos columnas
+\AtEndEnvironment{longtable}{\twocolumn}
+
+\usepackage{cuted}
+\usepackage{stfloats}   % para que strip funcione bien también con floats
 ''',
 }
 

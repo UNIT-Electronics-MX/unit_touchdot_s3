@@ -1,424 +1,265 @@
-Main Pin Map 
-=================
+Pinout Distribution
+====================
 
-.. list-table:: Main Pin Map – ESP32-S3 TouchDot
-   :header-rows: 1
-   :widths: 15 25 10 40 8
+Development Board Description
+-----------------------------
 
-   * - Arduino LilyPAD
-     - UNIT TouchDot S3
-     - ESP32-S3 GPIO
-     - GPIO Function
-     - Type
-   * - D13 (SCK)
-     - D13/SCK/T7/A6
-     - GPIO7
-     - RTC_GPIO7, GPIO7, TOUCH7, ADC1_CH6
-     - I/O/T
-   * - 3.3V
-     - 3.3V
-     - 3.3V
-     - Power supply
-     - P
-   * - AREF
-     - -
-     - -
-     - -
-     - -
-   * - A0 (Analog)
-     - A0/T1
-     - GPIO1
-     - RTC_GPIO1, GPIO1, TOUCH1, ADC1_CH0
-     - I/O/T
-   * - A1 (Analog)
-     - A1/T2
-     - GPIO2
-     - RTC_GPIO2, GPIO2, TOUCH2, ADC1_CH1
-     - I/O/T
-   * - A2 (Analog)
-     - A2/T3
-     - GPIO3
-     - RTC_GPIO3, GPIO3, TOUCH3, ADC1_CH2
-     - I/O/T
-   * - A3 (Analog)
-     - A3/T4
-     - GPIO4
-     - RTC_GPIO4, GPIO4, TOUCH4, ADC1_CH3
-     - I/O/T
-   * - A4 (SDA)
-     - A4/(SDA)/T5
-     - GPIO5
-     - RTC_GPIO5, GPIO5, TOUCH5, ADC1_CH4
-     - I/O/T
-   * - A5 (SCL)
-     - A5/(SCL)/T6
-     - GPIO6
-     - RTC_GPIO6, GPIO6, TOUCH6, ADC1_CH5
-     - I/O/T
-   * - -
-     - A6/D13/SCK/T7
-     - GPIO7
-     - ADC1_CH5, LP_UART_TXD, LP_GPIO5, MTDI, FSPIWP, SDIO
-     - I/O/T
-   * - -
-     - A7/D12/MISO/T8
-     - GPIO8
-     - WS2812B-2020 OUT (DO)
-     - I/O/T
-   * - -
-     - A8/D11/MOSI/T9
-     - GPIO9
-     - WS2812B-2020 OUT (DO)
-     - I/O/T
-   * - 5V
-     - 5V
-     - 5V
-     - Power supply
-     - P
-   * - RESET
-     - RST
-     - EN
-     - High: ON, enables the chip. Low: OFF
-     - I
-   * - GND
-     - GND
-     - GND
-     - GND
-     - GND
-   * - D0 (RX)
-     - D0/RX
-     - GPIO44
-     - U0RXD, GPIO44, CLK_OUT2
-     - I/O/T
-   * - D1 (TX)
-     - D1/TX
-     - GPIO43
-     - U0TXD, GPIO43, CLK_OUT1
-     - I/O/T
-   * - D2
-     - D2/T11
-     - GPIO11
-     - RTC_GPIO11, TOUCH11, ADC2_CH0, FSPID, FSPIIO5, SUBSPID
-     - I/O/T
-   * - D3
-     - D3/T12
-     - GPIO12
-     - RTC_GPIO12, TOUCH12, ADC2_CH1, FSPICLK, FSPIIO6, SUBSPICLK
-     - I/O/T
-   * - D4
-     - D4/T13
-     - GPIO13
-     - RTC_GPIO13, TOUCH13, ADC2_CH2, FSPIQ, FSPIIO7, SUBSPIQ
-     - I/O/T
-   * - D5
-     - D5/T14
-     - GPIO14
-     - RTC_GPIO14, TOUCH14, ADC2_CH3, FSPIWP, FSPIDQS, SUBSPIWP
-     - I/O/T
-   * - D6
-     - D6
-     - GPIO15
-     - RTC_GPIO15, U0RTS, ADC2_CH4, XTAL_32K_P
-     - I/O/T
-   * - D7
-     - D7
-     - GPIO16
-     - RTC_GPIO16, U0CTS, ADC2_CH5, XTAL_32K_N
-     - I/O/T
-   * - D3
-     - D5/TX1
-     - GPIO17
-     - RTC_GPIO17, U1TXD, ADC2_CH6
-     - I/O/T
-   * - D4
-     - D6/RX1
-     - GPIO18
-     - RTC_GPIO18, U1RXD, ADC2_CH7, CLK_OUT3
-     - I/O/T
-   * - D10 (SS)
-     - D10/SS/T10
-     - GPIO10
-     - RTC_GPIO10, TOUCH10, ADC1_CH9, FSPICS0, FSPIIO4, SUBSPICS0
-     - I/O/T
-   * - D11 (MOSI)
-     - D11/MOSI/T9/A8
-     - GPIO9
-     - RTC_GPIO9, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD
-     - I/O/T
-   * - D12 (MISO)
-     - D12/MISO/T8/A7
-     - GPIO8
-     - RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1
-     - I/O/T
+This development board is built around the powerful ESP32-S3 microcontroller, offering a comprehensive range of features for advanced embedded projects. It integrates multiple interfaces including digital I/O, analog inputs, and dedicated communication channels, making it ideal for a variety of applications such as IoT, wearable devices, and rapid prototyping.
+
+Key features include:
+- Detailed main pin map for the ESP32-S3 with clearly defined GPIO functions.
+- QWIIC-compatible JST connector, simplifying sensor and peripheral integrations.
+- Multiple debugging and programming interfaces including a JTAG test port and a serial programming header.
+- On-board schematic and pinout images embedded for easy reference via HTML elements.
+
+This versatile design provides users with extensive documentation and hardware accessibility, enabling efficient and effective development workflows.
+
+Squematic Diagram
+-----------------
+
+.. raw:: html
+
+  <div style="text-align: center;">
+    <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf', '_blank')">TouchDot S3</button>
+  </div>
+  <br></br>
+  <iframe src="./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
+  <br></br>
+
+Pinout  distribution
+--------------------
+
+.. raw:: html
+
+   <div style="text-align: center;">
+      <br><br>
+      <a href="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" target="_blank">
+        <img 
+           src="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" 
+           alt="TouchDot S3 Pinout" 
+           style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+        >
+      </a>
+      <br><br>
+   </div>
 
 
+The following simplified tables present key pinout details.
+
+Main Pin Map – ESP32-S3 TouchDot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: Main Pin Map – ESP32-S3 TouchDot (Simplified)
+  :header-rows: 1
+  :widths: 33 33 33
+
+  * - Pin (Arduino/Unit)
+    - ESP32-S3 GPIO
+    - Function
+  * - D13 (SCK) / D13-SCK/T7
+    - GPIO7
+    - RTC_GPIO7, TOUCH7
+  * - 3.3V / 3.3V
+    - 3.3V
+    - Power
+  * - AREF / -
+    - -
+    - -
+  * - A0 (Analog) / A0/T1
+    - GPIO1
+    - RTC_GPIO1, TOUCH1
+  * - A1 (Analog) / A1/T2
+    - GPIO2
+    - RTC_GPIO2, TOUCH2
+  * - A2 (Analog) / A2/T3
+    - GPIO3
+    - RTC_GPIO3, TOUCH3
+  * - A3 (Analog) / A3/T4
+    - GPIO4
+    - RTC_GPIO4, TOUCH4
+  * - A4 (SDA) / A4-SDA/T5
+    - GPIO5
+    - RTC_GPIO5, TOUCH5
+  * - A5 (SCL) / A5-SCL/T6
+    - GPIO6
+    - RTC_GPIO6, TOUCH6
+  * - 5V / 5V
+    - 5V
+    - Power
+  * - RESET / RST
+    - EN
+    - Enable/Disable
+  * - GND / GND
+    - GND
+    - Ground
+  * - D0 (RX) / D0-RX
+    - GPIO44
+    - U0RXD
+  * - D1 (TX) / D1-TX
+    - GPIO43
+    - U0TXD
+  * - D2 / D2-T11
+    - GPIO11
+    - ADC2_CH0
+  * - D3 / D3-T12
+    - GPIO12
+    - ADC2_CH1
+  * - D4 / D4-T13
+    - GPIO13
+    - ADC2_CH2
+  * - D5 / D5-T14
+    - GPIO14
+    - ADC2_CH3
+  * - D6
+    - GPIO15
+    - U0RTS
+  * - D7
+    - GPIO16
+    - U0CTS
+  * - D3 / D5-TX1
+    - GPIO17
+    - U1TXD
+  * - D4 / D6-RX1
+    - GPIO18
+    - U1RXD
+  * - D10 (SS) / D10-SS/T10
+    - GPIO10
+    - TOUCH10
+  * - D11 (MOSI) / D11-MOSI/T9
+    - GPIO9
+    - TOUCH9
+  * - D12 (MISO) / D12-MISO/T8
+    - GPIO8
+    - TOUCH8
 
 
-.. list-table:: QWIIC-Compatible JST Connector
-   :header-rows: 1
-   :widths: 8 15 15 10 40
+QWIIC-Compatible JST Connector
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   * - Pin
-     - JST Function
-     - Arduino Compatibility
-     - ESP32-S3 GPIO
-     - GPIO Function
-   * - 1
-     - GND
-     - GND
-     - GND
-     - GND
-   * - 2
-     - 3.3V
-     - 3.3V
-     - 3.3V
-     - 3.3V
-   * - 3
-     - SDA / MUX IO
-     - A4
-     - GPIO5
-     - RTC_GPIO5, GPIO5, TOUCH5, ADC1_CH4
-   * - 4
-     - SCL / MUX IO
-     - A5
-     - GPIO6
-     - RTC_GPIO6, GPIO6, TOUCH6, ADC1_CH5
+.. list-table:: QWIIC-Compatible JST Connector (Simplified)
+  :header-rows: 1
+  :widths: 33 33 33
+
+  * - Pin / JST
+    - ESP32-S3 GPIO
+    - Function
+  * - 1: GND
+    - GND
+    - Ground
+  * - 2: 3.3V
+    - 3.3V
+    - 3.3V
+  * - 3: SDA/MUX (A4)
+    - GPIO5
+    - RTC_GPIO5, TOUCH5
+  * - 4: SCL/MUX (A5)
+    - GPIO6
+    - RTC_GPIO6, TOUCH6
 
 
+JTAG Test Points
+~~~~~~~~~~~~~~~~
 
-.. list-table:: JTAG Test Points
-   :header-rows: 1
-   :widths: 15 15 10 40 8
+.. list-table:: JTAG Test Points (Simplified)
+  :header-rows: 1
+  :widths: 33 33 33
 
-   * - Function
-     - Arduino Pin
-     - ESP32-S3 GPIO
-     - GPIO Function
-     - Type
-   * - MTCK
-     - D21
-     - GPIO39
-     - MTCK, GPIO39, CLK_OUT3, SUBSPICS1
-     - I/O/T
-   * - MTDO
-     - D22
-     - GPIO40
-     - MTDO, GPIO40, CLK_OUT2
-     - I/O/T
-   * - MTDI
-     - D23
-     - GPIO41
-     - MTDI, GPIO41, CLK_OUT1
-     - I/O/T
-   * - MTMS
-     - D24
-     - GPIO42
-     - MTMS, GPIO42
-     - I/O/T
-   * - GND1
-     - GND
-     - GND
-     - GND
-     - GND
-   * - TP_3V3
-     - 3.3V
-     - Power Supply
-     - P (3.3V)
-     - P
+  * - Function (Pin)
+    - ESP32-S3 GPIO
+    - Description
+  * - MTCK (D21)
+    - GPIO39
+    - MTCK, CLK_OUT3
+  * - MTDO (D22)
+    - GPIO40
+    - MTDO, CLK_OUT2
+  * - MTDI (D23)
+    - GPIO41
+    - MTDI, CLK_OUT1
+  * - MTMS (D24)
+    - GPIO42
+    - MTMS
+  * - GND1 (GND)
+    - GND
+    - Ground
+  * - TP_3V3 (3.3V)
+    - Power
+    - 3.3V
 
 
+Serial Programming Header (1x6)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. list-table:: Serial Programming Header (1x6)
-   :header-rows: 1
-   :widths: 6 15 20 10 40 8
+.. list-table:: Serial Programming Header (Simplified)
+  :header-rows: 1
+  :widths: 33 33 33
 
-   * - Pin
-     - JST Function
-     - Arduino Compatibility
-     - ESP32-S3 GPIO
-     - GPIO Function
-     - Type
-   * - 1
-     - GND
-     - GND
-     - GND
-     - GND
-     - GND
-   * - 2
-     - EN
-     - RESET
-     - EN
-     - High: ON, enables chip; Low: powers off
-     - I
-   * - 3
-     - 3.3V
-     - 3.3V
-     - 3.3V
-     - 3.3V
-     - P
-   * - 4
-     - TX0
-     - D1
-     - GPIO43
-     - U0TXD, GPIO43, CLK_OUT1
-     - I/O/T
-   * - 5
-     - RX0
-     - D0
-     - GPIO44
-     - U0RXD, GPIO44, CLK_OUT2
-     - I/O/T
-   * - 6
-     - BOOT
-     - D29
-     - GPIO0
-     - RTC_GPIO0, GPIO0
-     - I/O/T
+  * - Pin (JST)
+    - ESP32-S3 GPIO
+    - Function
+  * - 1: GND
+    - GND
+    - Ground
+  * - 2: EN/RESET
+    - EN
+    - Enable/Reset
+  * - 3: 3.3V
+    - 3.3V
+    - 3.3V
+  * - 4: TX0 (D1)
+    - GPIO43
+    - U0TXD
+  * - 5: RX0 (D0)
+    - GPIO44
+    - U0RXD
+  * - 6: BOOT (D29)
+    - GPIO0
+    - RTC_GPIO0
 
 
+Expansion Header (2x6)
+~~~~~~~~~~~~~~~~~~~~~~
 
+.. list-table:: Expansion Header (Simplified)
+  :header-rows: 1
+  :widths: 33 33 33
 
-.. list-table:: Expansion Header (2x6)
-   :header-rows: 1
-   :widths: 6 20 20 12 40 8
-
-   * - Pin
-     - Function
-     - Arduino Pin
-     - ESP32-S3 GPIO
-     - GPIO Function
-     - Type
-   * - 1
-     - 3.3V
-     - 3.3V
-     - -
-     - Power Supply
-     - P
-   * - 2
-     - GND
-     - GND
-     - -
-     - Ground
-     - GND
-   * - 3
-     - GPIO33
-     - D15
-     - GPIO33
-     - SPIIO4, GPIO33, FSPIHD, SUBSPIHD
-     - I/O/T
-   * - 4
-     - GPIO34
-     - D16
-     - GPIO34
-     - SPIIO5, FSPICS0, SUBSPICS0
-     - I/O/T
-   * - 5
-     - GPIO35
-     - D17
-     - GPIO35
-     - SPIIO6, FSPID, SUBSPID
-     - I/O/T
-   * - 6
-     - GPIO36
-     - D18
-     - GPIO36
-     - SPIIO7, FSPICLK, SUBSPICLK
-     - I/O/T
-   * - 7
-     - GPIO37
-     - D19
-     - GPIO37
-     - SPIDQS, FSPIQ, SUBSPIQ
-     - I/O/T
-   * - 8
-     - GPIO38
-     - D20
-     - GPIO38
-     - GPIO38, FSPIWP, SUBSPIWP
-     - I/O/T
-   * - 9
-     - GPIO47 / PDM_DATA
-     - D27
-     - GPIO47
-     - SPICLK_P_DIFF, SUBSPICLK_P_DIFF
-     - I/O/T
-   * - 10
-     - GPIO48 / PDM_CLK
-     - D28
-     - GPIO48
-     - SPICLK_N_DIFF, SUBSPICLK_N_DIFF
-     - I/O/T
-   * - 11
-     - 5V
-     - 5V
-     - -
-     - Power Supply
-     - P
-   * - 12
-     - GND
-     - GND
-     - -
-     - Ground
-     - GND
-
-
-
-
-.. list-table:: microSD Connector (SPI Mode)
-   :header-rows: 1
-   :widths: 6 20 20 12 40 8
-
-   * - Pin
-     - microSD Pin Name
-     - SPI Function
-     - ESP32-S3 GPIO
-     - GPIO Function
-     - Type
-   * - 1
-     - DAT2
-     - Not used in SPI
-     - -
-     - -
-     - -
-   * - 2
-     - CD / DAT3
-     - CS (Chip Select)
-     - GPIO21
-     - RTC_GPIO2, GPIO21
-     - I/O/T
-   * - 3
-     - CMD
-     - MOSI
-     - GPIO9
-     - RTC_GPIO9, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD
-     - I/O/T
-   * - 4
-     - VDD
-     - 3.3V
-     - 3.3V
-     - Power Supply
-     - P
-   * - 5
-     - CLK
-     - SCLK
-     - GPIO7
-     - RTC_GPIO7, TOUCH7, ADC1_CH6
-     - I/O/T
-   * - 6
-     - VSS
-     - GND
-     - GND
-     - Ground
-     - GND
-   * - 7
-     - DAT0
-     - MISO
-     - GPIO8
-     - RTC_GPIO8, TOUCH8, ADC1_CH7, SUBSPICS1
-     - I/O/T
-   * - 8
-     - DAT1
-     - Not used in SPI
-     - -
-     - -
-     - -
+  * - Pin / Function
+    - ESP32-S3 GPIO
+    - Description
+  * - 1: 3.3V
+    - -
+    - Power
+  * - 2: GND
+    - -
+    - Ground
+  * - 3: GPIO33 (D15)
+    - GPIO33
+    - SPIIO4, FSPIHD
+  * - 4: GPIO34 (D16)
+    - GPIO34
+    - SPIIO5, FSPICS0
+  * - 5: GPIO35 (D17)
+    - GPIO35
+    - SPIIO6, FSPID
+  * - 6: GPIO36 (D18)
+    - GPIO36
+    - SPIIO7, FSPICLK
+  * - 7: GPIO37 (D19)
+    - GPIO37
+    - SPIDQS, FSPIQ
+  * - 8: GPIO38 (D20)
+    - GPIO38
+    - FSPIWP
+  * - 9: GPIO47/PDM_DATA (D27)
+    - GPIO47
+    - PDM_DATA
+  * - 10: GPIO48/PDM_CLK (D28)
+    - GPIO48
+    - PDM_CLK
+  * - 11: 5V
+    - -
+    - Power
+  * - 12: GND
+    - -
+    - Ground

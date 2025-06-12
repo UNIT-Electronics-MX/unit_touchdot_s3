@@ -4,6 +4,8 @@ import re
 import subprocess
 import markdown2
 import yaml
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 def markdown_table_to_latex(md_table):
@@ -95,6 +97,12 @@ def format_images_with_titles(content):
     return code
 
 def parse_readme_md(path):
+
+        # Obtener fecha local en Ciudad de México
+    cdmx_now = datetime.now(ZoneInfo("America/Mexico_City"))
+    formatted_date = cdmx_now.strftime("%Y-%m-%d %H:%M")
+
+
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -104,9 +112,15 @@ def parse_readme_md(path):
     frontmatter = yaml.safe_load(frontmatter_match.group(1)) if frontmatter_match else {}
     content = re.sub(r'^---.*?---\s*', '', content, flags=re.DOTALL)
 
-    image_paths = re.findall(r'!\[.*?\]\((.*?)\)', content)
-    image_product = next((img for img in image_paths if "product" in img.lower()), "")
-    other_images = [img for img in image_paths if img != image_product]
+
+    image_matches = re.findall(r'!\[(.*?)\]\((.*?)\)', content)
+    image_product = next((path for alt, path in image_matches if "product" in alt.lower()), "")
+    image_paths = [path for _, path in image_matches]
+    if not image_product and image_paths:
+        image_product = image_paths[0]
+        if not os.path.exists(image_product):
+            print(f"⚠️ Advertencia: La imagen principal no fue encontrada en la ruta: {image_product}")
+
 
     pin_table_match = re.search(r'## Pin.*?Layout\n((?:\|.*\n)+)', content)
     pin_table = markdown_table_to_latex(pin_table_match.group(1)) if pin_table_match else "No table."
@@ -114,11 +128,14 @@ def parse_readme_md(path):
     downloads = re.findall(r'- \[(.*?)\]\((.*?)\)', content)
     downloads_latex = "\\n".join([f"\\item \\href{{{link}}}{{{text}}}" for text, link in downloads])
 
+    date_used = frontmatter.get("modified", formatted_date)
+
     data = {
         "LOGO": frontmatter.get("logo", "images/logo_unit.png"),
         "TITLE": frontmatter.get("title", "Untitled"),
         "VERSION": frontmatter.get("version", "v1.0"),
-        "DATE": frontmatter.get("modified", "Unknown"),
+        "DATE": formatted_date,
+
         "SUBTITLE": frontmatter.get("subtitle", "Product Brief"),
         "INTRODUCTION": fix_paragraphs(extract_section("Introduction", content)),
 
@@ -139,6 +156,7 @@ def parse_readme_md(path):
         "IMAGE_PRODUCT": image_product,
         "OUTPUT_NAME": frontmatter.get("output", "generated_product_brief"),
     }
+    
 
     # Agregar tablas personalizadas después de definir 'data'
     custom_tables = {
@@ -163,20 +181,26 @@ def render_latex(template_path, output_path, replacements):
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(tex)
 
+        
 def compile_pdf(tex_file):
     try:
-        # Ejecutar pdflatex 2 veces para referencias y lastpage
         for _ in range(2):
-            subprocess.run(
+            result = subprocess.run(
                 ['pdflatex', '-interaction=nonstopmode', '-output-directory=build', tex_file],
-                check=True
+                capture_output=True,
+                text=True,
+                encoding='utf-8',
+                errors='replace'  # <- esta línea soluciona el problema
             )
+            if result.returncode != 0:
+                print("⚠️ LaTeX compiló con errores:")
+                print(result.stdout)
+                print(result.stderr)
+                if not os.path.exists("build/" + os.path.splitext(os.path.basename(tex_file))[0] + ".pdf"):
+                    raise subprocess.CalledProcessError(result.returncode, result.args)
     except subprocess.CalledProcessError as e:
-        print(f"LaTeX compilation failed with exit code {e.returncode}")
-        with open("build/" + os.path.splitext(os.path.basename(tex_file))[0] + ".log") as log:
-            print(log.read())
+        print(f"❌ LaTeX falló con código {e.returncode}")
         raise
-
 
 
 def clean_aux_files(output_name):
