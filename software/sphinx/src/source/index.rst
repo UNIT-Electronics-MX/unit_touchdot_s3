@@ -51,6 +51,7 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 
    00_1_terms
    01_0_map
+   01_1_tech
    01_setup
    02_lib
    02_1_esp-idf

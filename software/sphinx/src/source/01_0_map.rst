@@ -14,34 +14,8 @@ Key features include:
 
 This versatile design provides users with extensive documentation and hardware accessibility, enabling efficient and effective development workflows.
 
-Squematic Diagram
------------------
 
-.. raw:: html
 
-  <div style="text-align: center;">
-    <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf', '_blank')">TouchDot S3</button>
-  </div>
-  <br></br>
-  <iframe src="./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
-  <br></br>
-
-Pinout  distribution
---------------------
-
-.. raw:: html
-
-   <div style="text-align: center;">
-      <br><br>
-      <a href="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" target="_blank">
-        <img 
-           src="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" 
-           alt="TouchDot S3 Pinout" 
-           style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
-        >
-      </a>
-      <br><br>
-   </div>
 
 
 The following simplified tables present key pinout details.

@@ -14,12 +14,37 @@ sys.path.insert(0, os.path.abspath('.'))
 import os
 import re
 import shutil
+from PIL import Image
+
 
 def setup(app):
+
+    def convert_png_to_pdf(app, exception):
+        if app.builder.name != "latex":
+            return
+
+        image_list = [
+            os.path.join(app.srcdir, "_static", "touchdot", "unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png"),
+            os.path.join(app.srcdir, "_static", "touchdot", "unit_topology_V_0_1_2_ue0072_touch_dot_s3.png"),
+            os.path.join(app.srcdir, "_static", "touchdot", "unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png")
+        ]
+
+        for img_path in image_list:
+            if os.path.exists(img_path):
+                pdf_path = os.path.splitext(img_path)[0] + ".pdf"
+                try:
+                    img = Image.open(img_path).convert("RGB")
+                    img.save(pdf_path, "PDF", resolution=300.0)
+                    print(f"[sphinx hook] Converted PNG to PDF: {pdf_path}")
+                except Exception as e:
+                    print(f"[sphinx hook] ERROR converting {img_path}: {e}")
+            else:
+                print(f"[sphinx hook] WARNING: PNG not found: {img_path}")
+
     def copy_schematics(app, exception):
         if app.builder.name == "latex":
-            src = os.path.join(app.srcdir, "_static", "hardware","unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf")
-            dst = os.path.join(app.outdir, "unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf")
+            src = os.path.join(app.srcdir, "_static", "unit_sch_v_0_1_2_ue0072_touch_dot_s3.pdf")
+            dst = os.path.join(app.outdir, "unit_sch_v_0_1_2_ue0072_touch_dot_s3.pdf")
             if os.path.exists(src):
                 shutil.copyfile(src, dst)
                 print("[sphinx hook] Copied schematic PDF for LaTeX")
@@ -58,6 +83,8 @@ def setup(app):
                     break
             if not found:
                 print(f"[sphinx hook] WARNING: Could not find image for LaTeX: {img_clean}")
+
+    app.connect("build-finished", convert_png_to_pdf)
 
     app.connect("build-finished", copy_latex_raw_images)
     app.connect("build-finished", copy_schematics)
