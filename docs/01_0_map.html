@@ -55,7 +55,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '01_0_map';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Desktop Environment" href="01_setup.html" />
+    <link rel="next" title="Hardware Specifications" href="01_1_tech.html" />
     <link rel="prev" title="Hardware License (MIT)" href="00_1_terms.html" />
     <link rel="icon" href="_static/icon.svg" type="image/x-icon">
     <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
@@ -171,6 +171,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="00_1_terms.html">Hardware License (MIT)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Pinout Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_1_tech.html">Hardware Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
@@ -393,9 +394,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-board-description">Development Board Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#squematic-diagram">Squematic Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Pinout  distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-board-description">Development Board Description</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-pin-map-esp32-s3-touchdot">Main Pin Map – ESP32-S3 TouchDot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qwiic-compatible-jst-connector">QWIIC-Compatible JST Connector</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jtag-test-points">JTAG Test Points</a></li>
@@ -425,32 +424,11 @@ document.write(`
 - Multiple debugging and programming interfaces including a JTAG test port and a serial programming header.
 - On-board schematic and pinout images embedded for easy reference via HTML elements.</p>
 <p>This versatile design provides users with extensive documentation and hardware accessibility, enabling efficient and effective development workflows.</p>
-</section>
-<section id="squematic-diagram">
-<h2>Squematic Diagram<a class="headerlink" href="#squematic-diagram" title="Link to this heading">#</a></h2>
-<div style="text-align: center;">
-  <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf', '_blank')">TouchDot S3</button>
-</div>
-<br></br>
-<iframe src="./_static/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
-<br></br></section>
-<section id="id1">
-<h2>Pinout  distribution<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div style="text-align: center;">
-   <br><br>
-   <a href="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png" target="_blank">
-     <img
-        src="./_static/touchdot/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png"
-        alt="TouchDot S3 Pinout"
-        style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
-     >
-   </a>
-   <br><br>
-</div><p>The following simplified tables present key pinout details.</p>
+<p>The following simplified tables present key pinout details.</p>
 <section id="main-pin-map-esp32-s3-touchdot">
 <h3>Main Pin Map – ESP32-S3 TouchDot<a class="headerlink" href="#main-pin-map-esp32-s3-touchdot" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id2">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Main Pin Map – ESP32-S3 TouchDot (Simplified)</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Main Pin Map – ESP32-S3 TouchDot (Simplified)</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -575,8 +553,8 @@ document.write(`
 </section>
 <section id="qwiic-compatible-jst-connector">
 <h3>QWIIC-Compatible JST Connector<a class="headerlink" href="#qwiic-compatible-jst-connector" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id3">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">QWIIC-Compatible JST Connector (Simplified)</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">QWIIC-Compatible JST Connector (Simplified)</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -611,8 +589,8 @@ document.write(`
 </section>
 <section id="jtag-test-points">
 <h3>JTAG Test Points<a class="headerlink" href="#jtag-test-points" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id4">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">JTAG Test Points (Simplified)</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">JTAG Test Points (Simplified)</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -655,8 +633,8 @@ document.write(`
 </section>
 <section id="serial-programming-header-1x6">
 <h3>Serial Programming Header (1x6)<a class="headerlink" href="#serial-programming-header-1x6" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id5">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Serial Programming Header (Simplified)</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Serial Programming Header (Simplified)</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -699,8 +677,8 @@ document.write(`
 </section>
 <section id="expansion-header-2x6">
 <h3>Expansion Header (2x6)<a class="headerlink" href="#expansion-header-2x6" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id6">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Expansion Header (Simplified)</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id5">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Expansion Header (Simplified)</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 33.3%" />
 <col style="width: 33.3%" />
@@ -801,11 +779,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="01_setup.html"
+       href="01_1_tech.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Desktop Environment</p>
+        <p class="prev-next-title">Hardware Specifications</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -825,9 +803,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-board-description">Development Board Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#squematic-diagram">Squematic Diagram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Pinout  distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-board-description">Development Board Description</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-pin-map-esp32-s3-touchdot">Main Pin Map – ESP32-S3 TouchDot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qwiic-compatible-jst-connector">QWIIC-Compatible JST Connector</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jtag-test-points">JTAG Test Points</a></li>
