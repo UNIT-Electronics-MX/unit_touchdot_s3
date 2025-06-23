@@ -66,12 +66,22 @@ Equipped with 2.4 GHz Wi-Fi, Bluetooth 5.0, and a modern interface featuring a U
 ## Settings
 
 ### Interface Overview
-| Interface | Signals / Pins                     | Typical Use                                  |
-|-----------|------------------------------------|----------------------------------------------|
-| UART      | Tx (GPIO17), Rx (GPIO16)           | Serial terminal or sensor communication      |
-| I2C       | SDA (GPIO5), SCL (GPIO6)           | QWIIC modules, OLED displays                  |
-| SPI       | MOSI (GPIO9), MISO (GPIO8), SCK (GPIO13), CS (GPIO21) | External flash, TFT display     |
-| USB       | D+, D-                           | Native USB device or host                     |
+
+### Interface Overview
+
+| Interface | Signals / Pins   | Typical Use                                 |
+|-----------|------------------|---------------------------------------------|
+| UART      | TX (GPIO17)      | Serial transmit (TX)                        |
+| UART      | RX (GPIO16)      | Serial receive (RX)                         |
+| I2C       | SDA (GPIO5)      | I²C data line (QWIIC, OLED, sensors)        |
+| I2C       | SCL (GPIO6)      | I²C clock line                              |
+| SPI       | MOSI (GPIO9)     | Data to SPI device                          |
+| SPI       | MISO (GPIO8)     | Data from SPI device                        |
+| SPI       | SCK (GPIO13)     | SPI clock signal                            |
+| SPI       | CS (GPIO21)      | Chip select for SPI device                  |
+| USB       | D+ (GPIO20)      | USB differential data (+)                   |
+| USB       | D− (GPIO19)      | USB differential data (−)                   |
+
 
 ### Supports
 
