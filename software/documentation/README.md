@@ -17,12 +17,9 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 ![product](./images/top.png)
 
 ## Introduction
+The Unit Touchdot S3 is a compact ESP32-S3 Mini board designed for wearable electronics, IoT devices, educational projects, and smart automation. Its Lilypad-inspired, low-profile, sewable design makes it perfect for integrating into textiles and compact enclosures while providing advanced wireless and processing capabilities.
 
-The Unit Touchdot S3 is a compact and powerful development board based on the ESP32-S3 Mini, tailored for applications in wearable electronics, IoT devices, educational platforms, and smart automation. Inspired by the Lilypad design philosophy, it offers a low-profile, sewable form factor ideal for integration into textiles and compact enclosures, while delivering advanced wireless and processing capabilities.
-
-Equipped with 2.4 GHz Wi-Fi and Bluetooth 5.0, the Touchdot S3 enables seamless communication with mobile devices, web services, and wireless sensor networks. Its modern interface includes a USB-C connector for programming and power delivery, onboard LiPo battery charging, and a standard QWIIC I²C port for rapid peripheral integration.
-
-Designed for rapid prototyping and creative development, the Touchdot S3 bridges the gap between wearable design and embedded computing, offering a robust platform for students, makers, and engineers alike.
+Equipped with 2.4 GHz Wi-Fi, Bluetooth 5.0, and a modern interface featuring a USB-C connector, onboard LiPo charging, and a QWIIC I²C port, the board supports rapid prototyping and creative development. It offers a robust platform bridging wearable design and embedded computing, tailored for students, makers, and engineers.
 
 ## Functional Description
 
@@ -69,21 +66,23 @@ Designed for rapid prototyping and creative development, the Touchdot S3 bridges
 ## Settings
 
 ### Interface Overview
-
-| Interface  | Signals / Pins            | Typical Use                                         |
-|------------|----------------------------|-----------------------------------------------------|
-| UART       | Tx, Rx                     | Serial terminal or sensor communication            |
-| I2C        | SDA, SCL                   | QWIIC modules, OLED displays                       |
-| SPI        | MOSI, MISO, SCK, CS        | External flash, TFT display                        |
-| USB        | D+, D-                     | Native USB device or host                          |
+| Interface | Signals / Pins                     | Typical Use                                  |
+|-----------|------------------------------------|----------------------------------------------|
+| UART      | Tx (GPIO17), Rx (GPIO16)           | Serial terminal or sensor communication      |
+| I2C       | SDA (GPIO5), SCL (GPIO6)           | QWIIC modules, OLED displays                  |
+| SPI       | MOSI (GPIO9), MISO (GPIO8), SCK (GPIO13), CS (GPIO21) | External flash, TFT display     |
+| USB       | D+, D-                           | Native USB device or host                     |
 
 ### Supports
 
-| Symbol | I/O   | Description                         |
-|--------|-------|-------------------------------------|
-| VCC    | Input | Power supply (3.3V or 5V)           |
-| GND    | GND   | Ground connection                   |
-| IO     | Bidirectional | General-purpose I/O pins    |
+| Symbol   | I/O           | Description                                       |
+|----------|---------------|---------------------------------------------------|
+| USB -C   | Input         | USB-C connector for 5V power and data             |
+| Li-ion/LiPo     | Input         | Connector for LiPo battery power (3.7V - 4.2V)      |
+| VCC      | Input         | Main power supply (3.3V)                           |
+| GND      | Ground        | Ground connection                                |
+| IO       | Bidirectional | General-purpose I/O pins                         |
+| NeoPixel | Output    GPIO25    | WS2812 RGB LED data output                        |
 
 ## Block Diagram
 
