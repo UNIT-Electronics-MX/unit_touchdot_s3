@@ -18,7 +18,7 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 
 ## Introduction
 
-Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S3 chip, engineered for IoT, AI, and machine learning applications. Its design integrates the efficient ESP32-S3 Mini microcontroller—with low power consumption and an optional PSRAM configuration—to support both basic sensor projects and advanced prototypes. Additionally, the 3.3V power rail facilitates seamless connectivity with low-voltage components such as LilyPad and QWIIC sensors.
+Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S3 mini chip, Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.
 
 ## Functional Description
 
@@ -42,14 +42,7 @@ Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S
 - Environmental monitoring
 - Educational prototyping platforms
 
-## Features
 
-- ESP32-S3 with dual-core Xtensa® processor
-- Integrated 2.4GHz Wi-Fi and Bluetooth LE
-- 11 capacitive touchpads
-- 8 ADC channels
-- Optional PSRAM support
-- USB device and host support
 
 ## Pin & Connector Layout
 
