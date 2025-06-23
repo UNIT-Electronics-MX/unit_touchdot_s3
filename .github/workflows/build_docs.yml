@@ -30,6 +30,27 @@ jobs:
         pip install -r software/documentation/requirements.txt
         pip install -r software/sphinx/requirements.txt
 
+
+
+
+
+      
+    - name: Copy and rename hardware images for documentation
+      run: |
+        mkdir -p software/documentation/images
+
+        # Buscar y copiar dimension
+        file=$(ls hardware/resources/unit_dimension_*.png 2>/dev/null | head -n1)
+        if [ -n "$file" ]; then cp "$file" software/documentation/images/dimension.png; else echo "dimension not found"; fi
+
+        # Buscar y copiar pinout
+        file=$(ls hardware/resources/unit_pinout_*.png 2>/dev/null | head -n1)
+        if [ -n "$file" ]; then cp "$file" software/documentation/images/pinout.png; else echo "pinout not found"; fi
+
+        # Buscar y copiar top
+        file=$(ls hardware/resources/unit_top_*.png 2>/dev/null | head -n1)
+        if [ -n "$file" ]; then cp "$file" software/documentation/images/top.png; else echo "top not found"; fi
+
     #################################################
     # Generar PDF del Product Brief con nombre del repo
     #################################################
