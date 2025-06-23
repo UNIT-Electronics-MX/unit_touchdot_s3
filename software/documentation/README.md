@@ -1,9 +1,9 @@
 ---
-title: "S3 Development Board"
+title: "Touchdot S3 Development Board"
 version: "1.0"
-modified: "2025-04-30"
-output: "s3_development_board"
-subtitle: "ESP32-S3 development board with 2.4GHz Wi-Fi and Bluetooth 5.0"
+modified: "2025-04-23"
+output: "touchdot_s3_development_board"
+subtitle: "Compact ESP32-S3 mini microcontroller development board inspired by Lilypad. Ideal for IoT, control systems, and creative electronics projects."
 ---
 
 <!--
@@ -18,14 +18,20 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 
 ## Introduction
 
-Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S3 mini chip, Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.
+The Unit Touchdot S3 is a compact and powerful development board based on the ESP32-S3 Mini, tailored for applications in wearable electronics, IoT devices, educational platforms, and smart automation. Inspired by the Lilypad design philosophy, it offers a low-profile, sewable form factor ideal for integration into textiles and compact enclosures, while delivering advanced wireless and processing capabilities.
+
+Equipped with 2.4 GHz Wi-Fi and Bluetooth 5.0, the Touchdot S3 enables seamless communication with mobile devices, web services, and wireless sensor networks. Its modern interface includes a USB-C connector for programming and power delivery, onboard LiPo battery charging, and a standard QWIIC I²C port for rapid peripheral integration.
+
+Designed for rapid prototyping and creative development, the Touchdot S3 bridges the gap between wearable design and embedded computing, offering a robust platform for students, makers, and engineers alike.
 
 ## Functional Description
 
-- Integrated ESP32-S3 module with Wi-Fi and Bluetooth 5.0
-- USB-C for power and programming
+- Integrated ESP32-S3 module with 2.4 GHz Wi-Fi and Bluetooth 5.0
+- USB-C connector for power and programming
 - 3.3V power rail compatible with low-voltage peripherals
-- Built-in QWIIC connector for rapid sensor integration
+- Built-in QWIIC connector for easy I²C module integration
+- Micro SD card slot using SPI interface
+- Onboard NeoPixel (WS2812) RGB LED
 
 ## Electrical Characteristics & Signal Overview
 
@@ -37,12 +43,18 @@ Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S
 
 ## Applications
 
+- Wearable electronics
 - IoT sensor nodes
-- Smart home automation
+- Smart home and automation
+- Educational tools for STEM
 - Environmental monitoring
-- Educational prototyping platforms
-
-
+- Creative electronics and art-tech installations
+- Smart Home
+- Industrial Automation
+- Health Care
+- Consumer Electronics
+- Smart Agriculture
+- POS Machines
 
 ## Pin & Connector Layout
 
@@ -51,7 +63,7 @@ Unit TouchDot S3 is a compact development board powered by the versatile ESP32-S
 | GPIO      | D2 to D13       | Sensors, actuators                     |
 | UART      | Tx and Rx       | Serial communication                   |
 | TouchPad  | T1 to T11       | Capacitive sensors for touch detection |
-| Analogic  | A0 to A8        | 12-bit (0–4095) resolution             |
+| Analog    | A0 to A8        | 12-bit (0–4095) resolution             |
 | SPI       | Optional        | Displays, additional memory            |
 
 ## Settings
