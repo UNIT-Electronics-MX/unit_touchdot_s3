@@ -107,18 +107,16 @@ Equipped with 2.4 GHz Wi-Fi, Bluetooth 5.0, and a modern interface featuring a U
 Works with:
 
 - Arduino IDE (ESP32 board manager)
-- PlatformIO (ESP32-S3 support)
 - ESP-IDF toolchain
 - MicroPython firmware
 - CircuitPython (via UF2 bootloader)
 
 ## Downloads
 
-- [Schematic PDF](docs/schematic.pdf)
-- [Board Dimensions DXF](docs/dimensions.dxf)
-- [Pinout Diagram PNG](docs/pinout.png)
+- [Schematic PDF](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf)
+- [Board Dimensions](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/resources/unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png)
+- [Pinout Diagram PNG](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/resources/last_version/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png)
 
-## Purchase
 
 - [Buy from UNIT Electronics](https://www.uelectronics.com)
-- [Open product page](https://www.uelectronics.com/products/unit-lily-s3)
+- [Open product page](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/tree/main)
