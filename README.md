@@ -5,18 +5,18 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 <div align="center">
   <a href="#"><img src="hardware/resources/unit_top_V_0_1_2_ue0072_Touch-Dot-S3.png" width="450px" alt="UNIT Touchdot S3"></a>
   <p>UNIT Touchdot S3</p>
-</div>
-
-
+<div align="center">
 
 ### Additional Resources
 
-| Resource          | Link                                                                                                   |
-|--------------------|-------------------------------------------------------------------------------------------------------|
+| Resource                | Link                                                                                                   |
+|--------------------------|-------------------------------------------------------------------------------------------------------|
 | **Wiki-UNIT Electronics** | [Wiki-Uelectronics](https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Development_boards/touchdot)   |
-| **Product Brief**  | [Product brief](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/docs/unit_touchdot_s3_product_brief.pdf) |
-| **Schematic**      | [Schematic](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf) |
-| **Documentation** | [Documentation](https://unit-electronics-mx.github.io/unit_touchdot_s3/) |
+| **Product Brief**        | [Product brief](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/docs/unit_touchdot_s3_product_brief.pdf) |
+| **Schematic**            | [Schematic](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf) |
+| **Documentation**        | [Documentation](https://unit-electronics-mx.github.io/unit_touchdot_s3/) |
+
+</div>
 
 
 ### Microcontroller: ESP32-S3 Mini
