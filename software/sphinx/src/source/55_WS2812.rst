@@ -46,14 +46,29 @@ Below is an example that demonstrates how to control WS1280 LED strips using the
 
       .. code-block:: c++
 
-         #include <Adafruit_NeoPixel.h>
-         #define PIN 45
-         Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, PIN, NEO_GRB + NEO_KHZ800);
+         #include <FastLED.h>
+
+         #define LED_PIN     45      // GPIO45 (sí funciona con FastLED en ESP32-S3)
+         #define NUM_LEDS    1
+         #define BRIGHTNESS  64
+         #define LED_TYPE    WS2812
+         #define COLOR_ORDER GRB
+
+         CRGB leds[NUM_LEDS];
+
          void setup() {
-            strip.begin();
-            strip.setPixelColor(0, 255, 128, 0); // set to red, full brightness
-            strip.show();
+         delay(200); // delay para estabilidad de encendido
+         FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS)
+                  .setCorrection(TypicalLEDStrip);
+         FastLED.setBrightness(BRIGHTNESS);
+         leds[0] = CRGB(255, 128, 255); // Violeta claro
+         FastLED.show();
          }
+
+         void loop() {
+         // no-op
+         }
+
    .. tab:: esp-idf
 
       .. code-block:: c
