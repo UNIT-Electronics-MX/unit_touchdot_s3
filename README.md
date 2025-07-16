@@ -5,10 +5,12 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 <div align="center">
   <a href="#"><img src="hardware/resources/unit_top_V_0_1_2_ue0072_Touch-Dot-S3.png" width="450px" alt="UNIT Touchdot S3"></a>
   <p>UNIT Touchdot S3</p>
-<div align="center">
+
+</div>
 
 ### Additional Resources
 
+<div align="center">
 | Resource                | Link                                                                                                   |
 |--------------------------|-------------------------------------------------------------------------------------------------------|
 | **Wiki-UNIT Electronics** | [Wiki-Uelectronics](https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Development_boards/touchdot)   |
