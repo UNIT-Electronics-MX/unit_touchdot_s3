@@ -448,13 +448,27 @@ The TouchDot S3 board has a GPIO pin embebbed connected to the single WS2812 LED
 <span class="n">np</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_NeoPixel.h&gt;</span>
-<span class="cp">#define PIN 45</span>
-<span class="n">Adafruit_NeoPixel</span><span class="w"> </span><span class="n">strip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">PIN</span><span class="p">,</span><span class="w"> </span><span class="n">NEO_GRB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NEO_KHZ800</span><span class="p">);</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;FastLED.h&gt;</span>
+
+<span class="cp">#define LED_PIN     45      </span><span class="c1">// GPIO45 (sí funciona con FastLED en ESP32-S3)</span>
+<span class="cp">#define NUM_LEDS    1</span>
+<span class="cp">#define BRIGHTNESS  64</span>
+<span class="cp">#define LED_TYPE    WS2812</span>
+<span class="cp">#define COLOR_ORDER GRB</span>
+
+<span class="n">CRGB</span><span class="w"> </span><span class="n">leds</span><span class="p">[</span><span class="n">NUM_LEDS</span><span class="p">];</span>
+
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="w">   </span><span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// set to red, full brightness</span>
-<span class="w">   </span><span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+<span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span><span class="c1">// delay para estabilidad de encendido</span>
+<span class="n">FastLED</span><span class="p">.</span><span class="n">addLeds</span><span class="o">&lt;</span><span class="n">LED_TYPE</span><span class="p">,</span><span class="w"> </span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">COLOR_ORDER</span><span class="o">&gt;</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span><span class="w"> </span><span class="n">NUM_LEDS</span><span class="p">)</span>
+<span class="w">         </span><span class="p">.</span><span class="n">setCorrection</span><span class="p">(</span><span class="n">TypicalLEDStrip</span><span class="p">);</span>
+<span class="n">FastLED</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="n">BRIGHTNESS</span><span class="p">);</span>
+<span class="n">leds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span><span class="w"> </span><span class="c1">// Violeta claro</span>
+<span class="n">FastLED</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// no-op</span>
 <span class="p">}</span>
 </pre></div>
 </div>
