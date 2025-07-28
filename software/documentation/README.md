@@ -14,7 +14,7 @@ Edita las secciones respetando el orden, sin eliminar los encabezados.
 
 # ESP32-S3 Development Board 
 
-![product](./images/top.png)
+![product](../../hardware/resources/touchdot_top.jpg)
 
 ## Introduction
 The Unit Touchdot S3 is a compact ESP32-S3 Mini board designed for wearable electronics, IoT devices, educational projects, and smart automation. Its Lilypad-inspired, low-profile, sewable design makes it perfect for integrating into textiles and compact enclosures while providing advanced wireless and processing capabilities.
@@ -96,11 +96,11 @@ Equipped with 2.4 GHz Wi-Fi, Bluetooth 5.0, and a modern interface featuring a U
 
 ## Block Diagram
 
-![Function Diagram](images/pinout.png)
+![Function Diagram](../../hardware/resources/unit_pinout_v_0_1_4_ue0072_touch_dot_s3_en.jpg)
 
 ## Dimensions
 
-![Dimensions](images/dimension.png)
+![Dimensions](../../hardware/resources/unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png)
 
 ## Usage
 

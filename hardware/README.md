@@ -11,7 +11,7 @@
 ## PINOUT
 
 <div align="center">
-    <a href="#"><img src="resources/unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png" width="500px"><br/>Pinout</a>
+    <a href="#"><img src="resources/unit_pinout_v_0_1_4_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Pinout</a>
 
 
 | **Group**     | **Available Pins** | **Suggested Use**                      |
