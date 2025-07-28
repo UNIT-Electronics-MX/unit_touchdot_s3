@@ -43,15 +43,12 @@ Equipped with 2.4 GHz Wi-Fi, Bluetooth 5.0, and a modern interface featuring a U
 - Wearable electronics
 - IoT sensor nodes
 - Smart home and automation
-- Educational tools for STEM
+- Educational tools for STEM (science, technology, engineering, and mathematics)
 - Environmental monitoring
 - Creative electronics and art-tech installations
 - Smart Home
-- Industrial Automation
 - Health Care
-- Consumer Electronics
-- Smart Agriculture
-- POS Machines
+
 
 ## Pin & Connector Layout
 
