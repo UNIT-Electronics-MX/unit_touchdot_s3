@@ -18,7 +18,7 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 | **Product Brief**        | [Product brief](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/docs/unit_touchdot_s3_product_brief.pdf) |
 | **Schematic**            | [Schematic](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf) |
 | **Documentation**        | [Documentation](https://unit-electronics-mx.github.io/unit_touchdot_s3/) |
-
+| **Datasheet ESP32-S3-MINI-1**           | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-mini-1_mini-1u_datasheet_en.pdf) |
 </div>
 
 
@@ -26,7 +26,7 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 
 - **Energy Efficient:** Optimized for low power consumption.
 - **3.3 V Power Rail:** Compatible with wearable sensors and peripherals like QWIIC modules.
-- **Wi-Fi and Bluetooth 5:** Supports 2.4 GHz Wi-Fi (802.11 b/g/n) with 40 MHz of bandwidth and Bluetooth Low Energy subsystem
+- **Wi-Fi and Bluetooth 5:** Supports 2.4 GHz Wi-Fi (802.11 b/g/n) and Bluetooth Low Energy subsystem
 - **CPU:** Xtensa® dual-core 32-bit LX7 microprocessor
 - **Memory:** 384 KB Rom, 512 KB SRAM, and 16 KB SRAM in RTC  
 
@@ -34,7 +34,6 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 
 - **USB-C Charging & Communication:** Ensures reliable power delivery and straightforward programming.
 - **Integrated LiPo Battery Management:** Streamlines power safety and efficiency without extra circuitry.
-- **Distributed Power Pads:** Magnetic connectors deliver **GND** and **3.3 V** for simple, reliable wiring to sensors and actuators.
 
 ### GPIOs
 
@@ -59,3 +58,4 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 ### License
 
 This project is licensed under the MIT License.
+
