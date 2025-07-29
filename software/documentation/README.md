@@ -110,7 +110,7 @@ Works with:
 
 ## Downloads
 
-- [Schematic PDF](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf)
+- [Schematic PDF](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/tree/main/hardware#hardware)
 - [Board Dimensions](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/tree/main/hardware#dimensions)
 - [Pinout Diagram PNG](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/tree/main/hardware#pinout)
 
