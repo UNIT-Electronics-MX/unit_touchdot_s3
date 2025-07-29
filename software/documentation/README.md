@@ -111,8 +111,8 @@ Works with:
 ## Downloads
 
 - [Schematic PDF](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf)
-- [Board Dimensions](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/resources/unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png)
-- [Pinout Diagram PNG](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/hardware/resources/last_version/unit_pinout_v_0_1_2_ue0072_touch_dot_s3_en.png)
+- [Board Dimensions](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/tree/main/hardware#dimensions)
+- [Pinout Diagram PNG](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/tree/main/hardware#pinout)
 
 ## Purchase
 
