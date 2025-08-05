@@ -13,7 +13,7 @@
 <div align="center">
     <a href="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.jpg"><img src="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Top view</a>
 
-<br/>
+<br/><br/>
 
 <a href="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.jpg"><img src="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Bottom view</a>
 
