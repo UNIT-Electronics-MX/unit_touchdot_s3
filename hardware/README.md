@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<a href="./unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf"><img src="resources/Schematics_icon.jpg?raw=false" width="500px"><br/>Schematics</a>
+<a href="./unit_sch_V_0_1_2_ue0072_touch_dot_s3.pdf"><img src="resources/img/Schematics_icon.jpg?raw=false" width="450px"><br/>Schematics</a>
 
 </div>
 
@@ -11,7 +11,11 @@
 ## PINOUT
 
 <div align="center">
-    <a href="#"><img src="resources/unit_pinout_v_0_1_4_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Pinout</a>
+    <a href="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.jpg"><img src="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Top view</a>
+
+<br/>
+
+<a href="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.jpg"><img src="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Bottom view</a>
 
 
 | **Group**     | **Available Pins** | **Suggested Use**                      |
