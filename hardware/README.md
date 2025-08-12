@@ -11,11 +11,11 @@
 ## PINOUT
 
 <div align="center">
-    <a href="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.jpg"><img src="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Top view</a>
+    <a href="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.png"><img src="resources/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.png" width="500px"><br/>Top view</a>
 
 <br/><br/>
 
-<a href="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.jpg"><img src="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.jpg" width="500px"><br/>Bottom view</a>
+<a href="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.png"><img src="resources/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.png" width="500px"><br/>Bottom view</a>
 
 
 | **Group**     | **Available Pins** | **Suggested Use**                      |
