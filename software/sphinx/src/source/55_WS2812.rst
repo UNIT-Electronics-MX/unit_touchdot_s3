@@ -1,10 +1,9 @@
 WS2812-2020  Control 
 ====================
 
-Harness the power of WS2812-2020 LED strips with the Touch Dot S3 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.
+The WS2812-2020 is a compact RGB LED that can be precisely controlled using the Touch Dot S3 board. This section provides technical guidance for driving WS2812 LEDs and generating custom lighting patterns with MicroPython, C++, and ESP-IDF.
 
-This section describes how to control WS2812 LED strips using the Touch Dot S3 board.
-The Touch Dot S3 board has a GPIO pin embebbed connected to the single WS2812 LED.
+On the Touch Dot S3, a dedicated GPIO pin (GPIO45) is directly connected to the WS2812 LED, allowing for straightforward hardware interfacing and reliable signal timing.
 
 .. list-table:: Pin Mapping for WS2812
    :widths: 10 10
@@ -24,6 +23,10 @@ The Touch Dot S3 board has a GPIO pin embebbed connected to the single WS2812 LE
    :width: 40%
 
    WS2812-2020 LED Strip
+
+.. note::
+
+   The neopixel library is compatible with WS2812 and WS2812B LED strips. The WS2812-2020 is a variant of the WS2812B, so it is fully compatible with the neopixel library.
 
 Code Example
 ------------
