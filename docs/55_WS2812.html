@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>WS2812 Control &#8212; Touchdot  User Guide and Technical Reference 0.0.1 documentation</title>
+    <title>WS2812-2020 Control &#8212; Touch Dot  User Guide and Technical Reference 0.0.1 documentation</title>
   
   
   
@@ -150,8 +150,8 @@
       
     
     
-    <img src="_static/touchdot.png" class="logo__image only-light" alt="Touchdot  User Guide and Technical Reference 0.0.1 documentation - Home"/>
-    <script>document.write(`<img src="_static/touchdot.png" class="logo__image only-dark" alt="Touchdot  User Guide and Technical Reference 0.0.1 documentation - Home"/>`);</script>
+    <img src="_static/touchdot.png" class="logo__image only-light" alt="Touch Dot  User Guide and Technical Reference 0.0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/touchdot.png" class="logo__image only-dark" alt="Touch Dot  User Guide and Technical Reference 0.0.1 documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -180,7 +180,7 @@
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">WS2812 Control</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">WS2812-2020  Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
@@ -237,7 +237,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics-MX/unit_touchdot_s3" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -254,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/edit/main/docs/55_WS2812.rst" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3/edit/main/docs/55_WS2812.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -271,7 +271,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/issues/new?title=Issue%20on%20page%20%2F55_WS2812.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3/issues/new?title=Issue%20on%20page%20%2F55_WS2812.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -385,7 +385,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>WS2812 Control</h1>
+    <h1>WS2812-2020  Control</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,11 +407,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="ws2812-control">
-<h1>WS2812 Control<a class="headerlink" href="#ws2812-control" title="Link to this heading">#</a></h1>
-<p>Harness the power of WS1280 LED strips with the TouchDot S3 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.</p>
-<p>This section describes how to control WS2812 LED strips using the TouchDot S3 board.
-The TouchDot S3 board has a GPIO pin embebbed connected to the single WS2812 LED.</p>
+  <section id="ws2812-2020-control">
+<h1>WS2812-2020  Control<a class="headerlink" href="#ws2812-2020-control" title="Link to this heading">#</a></h1>
+<p>The WS2812-2020 is a compact RGB LED that can be precisely controlled using the Touch Dot S3 board. This section provides technical guidance for driving WS2812 LEDs and generating custom lighting patterns with MicroPython, C++, and ESP-IDF.</p>
+<p>On the Touch Dot S3, a dedicated GPIO pin (GPIO45) is directly connected to the WS2812 LED, allowing for straightforward hardware interfacing and reliable signal timing.</p>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
 <caption><span class="caption-number">Table 12 </span><span class="caption-text">Pin Mapping for WS2812</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
@@ -431,14 +430,18 @@ The TouchDot S3 board has a GPIO pin embebbed connected to the single WS2812 LED
 </table>
 </div>
 <figure class="align-center" id="id2">
-<span id="figura-touchdot-s3-one"></span><a class="reference internal image-reference" href="_images/WS1280_LED.jpg"><img alt="rgb led" src="_images/WS1280_LED.jpg" style="width: 40%;" /></a>
+<span id="figura-touch-dot-s3-one"></span><a class="reference internal image-reference" href="_images/WS2812-2020.jpg"><img alt="rgb led" src="_images/WS2812-2020.jpg" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">WS2812 LED Strip</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">WS2812-2020 LED Strip</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The neopixel library is compatible with WS2812 and WS2812B LED strips. The WS2812-2020 is a variant of the WS2812B, so it is fully compatible with the neopixel library.</p>
+</div>
 <section id="code-example">
 <h2>Code Example<a class="headerlink" href="#code-example" title="Link to this heading">#</a></h2>
-<p>Below is an example that demonstrates how to control WS1280 LED strips using the  TouchDot S3 board</p>
+<p>Below is an example that demonstrates how to control WS2812-2020 LED strips using the  Touch Dot S3 board</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 <span class="kn">from</span> <span class="nn">neopixel</span> <span class="kn">import</span> <span class="n">NeoPixel</span>

@@ -5,7 +5,7 @@ SPI (Serial Peripheral Interface)
 SPI Overview
 ----------------
 
-SPI (Serial Peripheral Interface) is a synchronous, full-duplex, master-slave communication bus. It is commonly used to connect microcontrollers to peripherals such as sensors, displays, and memory devices. The TouchDot development board features SPI communication capabilities, allowing you to interface with a wide range of SPI devices.
+SPI (Serial Peripheral Interface) is a synchronous, full-duplex, master-slave communication bus. It is commonly used to connect microcontrollers to peripherals such as sensors, displays, and memory devices. The Touch Dot development board features SPI communication capabilities, allowing you to interface with a wide range of SPI devices.
 
 
 .. .. _figura-spi:
