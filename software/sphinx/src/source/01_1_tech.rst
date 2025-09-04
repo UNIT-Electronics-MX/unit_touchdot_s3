@@ -1,7 +1,7 @@
 Hardware Specifications
 =========================
 
-The TouchDot S3 development board is built around the ESP32-S3 Mini chip, offering a range of features tailored for wearables and IoT applications.
+The Touch Dot S3 development board is built around the ESP32-S3 Mini chip, offering a range of features tailored for wearables and IoT applications.
 
 
 
@@ -33,8 +33,7 @@ Pinout Distribution
 .. only:: latex
 
 
-    .. figure::  /_static/touchdot/unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png
-        
+    .. figure::  ./_static/touchdot/unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png
         :align: center
 
         Dimension
@@ -47,7 +46,7 @@ Pinout Distribution
         <a href="./_static/touchdot/unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png" target="_blank">
           <img 
             src="./_static/touchdot/unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png" 
-            alt="TouchDot S3 Pinout" 
+            alt="Touch Dot S3 Pinout" 
             style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
           >
         </a>

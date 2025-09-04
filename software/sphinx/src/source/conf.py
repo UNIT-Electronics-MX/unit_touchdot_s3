@@ -24,9 +24,9 @@ def setup(app):
             return
 
         image_list = [
-            os.path.join(app.srcdir, "_static", "touchdot", "unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png"),
-            os.path.join(app.srcdir, "_static", "touchdot", "unit_topology_V_0_1_2_ue0072_touch_dot_s3.png"),
-            os.path.join(app.srcdir, "_static", "touchdot", "unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png")
+            os.path.join(app.srcdir, "_static", "Touch Dot", "unit_dimension_V_0_1_2_ue0072_Touch-Dot-S3.png"),
+            os.path.join(app.srcdir, "_static", "Touch Dot", "unit_topology_V_0_1_2_ue0072_touch_dot_s3.png"),
+            os.path.join(app.srcdir, "_static", "Touch Dot", "unit_pinout_v_0_1_3_ue0072_touch_dot_s3_en.png")
         ]
 
         for img_path in image_list:
@@ -90,7 +90,7 @@ def setup(app):
     app.connect("build-finished", copy_schematics)
 
 
-project = 'Touchdot  User Guide and Technical Reference'
+project = 'Touch Dot  User Guide and Technical Reference'
 copyright = '2025, Unit Electronics'
 author = 'R&D and Innovation Department'
 release = '0.0.1'
@@ -118,7 +118,7 @@ copybutton_only_copy_prompt_lines = False  # Copies all lines, including those w
 
 templates_path = ['_templates']
 html_theme_options = {
-    "repository_url": "https://github.com/UNIT-Electronics-MX/unit_touchdot_s3",  # URL of your project's repository
+    "repository_url": "https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3",  # URL of your project's repository
     "repository_branch": "main",  # Rama principal de tu repositorio
       "path_to_docs": "docs/",  # Ruta a la documentación dentro del repositorio
     "use_repository_button": True,  # Muestra un botón que enlaza al repositorio
@@ -126,7 +126,7 @@ html_theme_options = {
     "use_edit_page_button": True,  # Muestra un botón para editar la página actual
 }
 latex_documents = [
-    ('index', 'programmer.tex', 'TouchDot  User Guide and Technical Reference',
+    ('index', 'programmer.tex', 'Touch Dot  User Guide and Technical Reference',
      'Department of Research, Innovation, and Development', 'manual'),
 ]
 
@@ -198,7 +198,7 @@ html_theme = 'sphinx_book_theme'
 html_logo = "_static/touchdot.png"
 
 html_static_path = ['_static']
-latex_logo = "_static/touchdot.png" 
+latex_logo = "_static/touchdot.png"
 html_css_files = [
     'custom.css',
 ]

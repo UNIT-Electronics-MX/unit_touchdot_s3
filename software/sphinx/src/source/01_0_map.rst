@@ -7,6 +7,7 @@ Development Board Description
 This development board is built around the powerful ESP32-S3 microcontroller, offering a comprehensive range of features for advanced embedded projects. It integrates multiple interfaces including digital I/O, analog inputs, and dedicated communication channels, making it ideal for a variety of applications such as IoT, wearable devices, and rapid prototyping.
 
 Key features include:
+
 - Detailed main pin map for the ESP32-S3 with clearly defined GPIO functions.
 - QWIIC-compatible JST connector, simplifying sensor and peripheral integrations.
 - Multiple debugging and programming interfaces including a JTAG test port and a serial programming header.
@@ -20,10 +21,10 @@ This versatile design provides users with extensive documentation and hardware a
 
 The following simplified tables present key pinout details.
 
-Main Pin Map – ESP32-S3 TouchDot
+Main Pin Map ESP32-S3 Touch Dot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. list-table:: Main Pin Map – ESP32-S3 TouchDot (Simplified)
+.. list-table:: Main Pin Map – ESP32-S3 Touch Dot (Simplified)
   :header-rows: 1
   :widths: 33 33 33
 

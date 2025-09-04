@@ -1,9 +1,10 @@
-WS2812 Control 
-=================
-Harness the power of WS1280 LED strips with the TouchDot S3 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.
+WS2812-2020  Control 
+====================
 
-This section describes how to control WS2812 LED strips using the TouchDot S3 board.
-The TouchDot S3 board has a GPIO pin embebbed connected to the single WS2812 LED.
+Harness the power of WS2812-2020 LED strips with the Touch Dot S3 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.
+
+This section describes how to control WS2812 LED strips using the Touch Dot S3 board.
+The Touch Dot S3 board has a GPIO pin embebbed connected to the single WS2812 LED.
 
 .. list-table:: Pin Mapping for WS2812
    :widths: 10 10
@@ -15,19 +16,19 @@ The TouchDot S3 board has a GPIO pin embebbed connected to the single WS2812 LED
    * - DIN
      - 45
 
-.. _figura-TouchDot S3-one:
+.. _figura-Touch Dot S3-one:
 
-.. figure:: /_static/img/WS1280_LED.jpg
+.. figure:: /_static/img/WS2812-2020.jpg
    :align: center
    :alt: rgb led
    :width: 40%
 
-   WS2812 LED Strip
+   WS2812-2020 LED Strip
 
 Code Example
 ------------
 
-Below is an example that demonstrates how to control WS1280 LED strips using the  TouchDot S3 board
+Below is an example that demonstrates how to control WS2812-2020 LED strips using the  Touch Dot S3 board
 
 .. tabs::
 
