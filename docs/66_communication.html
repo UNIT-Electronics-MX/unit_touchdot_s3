@@ -415,8 +415,7 @@ document.write(`
 <h2>Wi-Fi<a class="headerlink" href="#wi-fi" title="Link to this heading">#</a></h2>
 <p>Learn how to set up and use Wi-Fi communication on the Touch Dot S3 board.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">import</span> <span class="nn">network</span>
 
 <span class="n">wlan</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
@@ -432,108 +431,103 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
 </pre></div>
 </div>
-</div></blockquote>
-<div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFi.h&gt;</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;WiFi.h&gt;</span>
 
 <span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">ssid</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-ssid&quot;</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-password&quot;</span><span class="p">;</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
-<span class="w">  </span><span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
 <span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connecting to WiFi...&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connected to WiFi&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Connected to WiFi&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">());</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// Your code here</span>
+<span class="w">    </span><span class="c1">// Your code here</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div></div></div>
+</div></div>
 </section>
 <section id="bluetooth">
 <h2>Bluetooth<a class="headerlink" href="#bluetooth" title="Link to this heading">#</a></h2>
 <p>Explore Bluetooth communication capabilities and learn how to connect to Bluetooth devices.</p>
-<p>scan sniffer Code
-.. tabs:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">tab</span><span class="p">::</span> <span class="n">MicroPython</span>
+<p>scan sniffer Code</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bluetooth</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
-   <span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+<span class="c1"># Initialize Bluetooth</span>
+<span class="n">ble</span> <span class="o">=</span> <span class="n">bluetooth</span><span class="o">.</span><span class="n">BLE</span><span class="p">()</span>
+<span class="n">ble</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
-     <span class="kn">import</span> <span class="nn">bluetooth</span>
-     <span class="kn">import</span> <span class="nn">time</span>
+<span class="c1"># Helper function to convert memoryview to MAC address string</span>
+<span class="k">def</span> <span class="nf">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02x}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">addr</span><span class="p">)</span>
 
-     <span class="c1"># Initialize Bluetooth</span>
-     <span class="n">ble</span> <span class="o">=</span> <span class="n">bluetooth</span><span class="o">.</span><span class="n">BLE</span><span class="p">()</span>
-     <span class="n">ble</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Helper function to parse device name from advertising data</span>
+<span class="k">def</span> <span class="nf">decode_name</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">:</span>
+        <span class="n">ad_length</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">ad_type</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x09</span><span class="p">:</span>  <span class="c1"># Complete Local Name</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x08</span><span class="p">:</span>  <span class="c1"># Shortened Local Name</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="n">ad_length</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-     <span class="c1"># Helper function to convert memoryview to MAC address string</span>
-     <span class="k">def</span> <span class="nf">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
-         <span class="k">return</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02x}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">addr</span><span class="p">)</span>
+<span class="c1"># Global counter for devices found</span>
+<span class="n">devices_found</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">max_devices</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Limit to 10 devices</span>
 
-     <span class="c1"># Helper function to parse device name from advertising data</span>
-     <span class="k">def</span> <span class="nf">decode_name</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-         <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-         <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">:</span>
-             <span class="n">ad_length</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-             <span class="n">ad_type</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-             <span class="k">if</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x09</span><span class="p">:</span>  <span class="c1"># Complete Local Name</span>
-                 <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-             <span class="k">elif</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x08</span><span class="p">:</span>  <span class="c1"># Shortened Local Name</span>
-                 <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-             <span class="n">i</span> <span class="o">+=</span> <span class="n">ad_length</span> <span class="o">+</span> <span class="mi">1</span>
-         <span class="k">return</span> <span class="kc">None</span>
+<span class="c1"># Callback function to handle advertising reports</span>
+<span class="k">def</span> <span class="nf">bt_irq</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">devices_found</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># event 5 is for advertising reports</span>
+        <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
+            <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
 
-     <span class="c1"># Global counter for devices found</span>
-     <span class="n">devices_found</span> <span class="o">=</span> <span class="mi">0</span>
-     <span class="n">max_devices</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Limit to 10 devices</span>
+        <span class="n">addr_type</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">adv_type</span><span class="p">,</span> <span class="n">rssi</span><span class="p">,</span> <span class="n">adv_data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">mac_addr</span> <span class="o">=</span> <span class="n">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+        <span class="n">device_name</span> <span class="o">=</span> <span class="n">decode_name</span><span class="p">(</span><span class="n">adv_data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">device_name</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: </span><span class="si">{</span><span class="n">device_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: Unknown&quot;</span><span class="p">)</span>
 
-     <span class="c1"># Callback function to handle advertising reports</span>
-     <span class="k">def</span> <span class="nf">bt_irq</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-         <span class="k">global</span> <span class="n">devices_found</span>
-         <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># event 5 is for advertising reports</span>
-             <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
-                 <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
-                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
-                 <span class="k">return</span>
+        <span class="n">devices_found</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment counter</span>
 
-             <span class="n">addr_type</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">adv_type</span><span class="p">,</span> <span class="n">rssi</span><span class="p">,</span> <span class="n">adv_data</span> <span class="o">=</span> <span class="n">data</span>
-             <span class="n">mac_addr</span> <span class="o">=</span> <span class="n">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
-             <span class="n">device_name</span> <span class="o">=</span> <span class="n">decode_name</span><span class="p">(</span><span class="n">adv_data</span><span class="p">)</span>
-             <span class="k">if</span> <span class="n">device_name</span><span class="p">:</span>
-                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: </span><span class="si">{</span><span class="n">device_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-             <span class="k">else</span><span class="p">:</span>
-                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: Unknown&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
+            <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
 
-             <span class="n">devices_found</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment counter</span>
+<span class="c1"># Set the callback function</span>
+<span class="n">ble</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">bt_irq</span><span class="p">)</span>
 
-             <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
-                 <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
-                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
+<span class="c1"># Start active scanning</span>
+<span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># Active scan for 10 seconds with interval and window of 30ms</span>
 
-     <span class="c1"># Set the callback function</span>
-     <span class="n">ble</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">bt_irq</span><span class="p">)</span>
-
-     <span class="c1"># Start active scanning</span>
-     <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># Active scan for 10 seconds with interval and window of 30ms</span>
-
-     <span class="c1"># Keep the program running to allow the callback to be processed</span>
-     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
- <span class="o">..</span> <span class="n">tab</span><span class="p">::</span> <span class="n">C</span><span class="o">++</span>
-
-   <span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">c</span><span class="o">++</span>
+<span class="c1"># Keep the program running to allow the callback to be processed</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;BLEDevice.h&gt;</span>
+</pre></div>
+</div>
+</div></div>
 </section>
 </section>
 
