@@ -10,50 +10,50 @@ Learn how to set up and use Wi-Fi communication on the Touch Dot S3 board.
 
 .. tabs::
 
-   .. tab:: MicroPython
+    .. tab:: MicroPython
 
-      .. code-block:: python
+        .. code-block:: python
 
-        import machine
-        import network
+          import machine
+          import network
 
-        wlan = network.WLAN(network.STA_IF)
-        wlan.active(True)
-        wlan.connect('your-ssid', 'your-password')
+          wlan = network.WLAN(network.STA_IF)
+          wlan.active(True)
+          wlan.connect('your-ssid', 'your-password')
 
-        while not wlan.isconnected():
-            pass
+          while not wlan.isconnected():
+                pass
 
-        print('Connected to Wi-Fi')
+          print('Connected to Wi-Fi')
 
-        # Check the IP address
-        print(wlan.ifconfig())
-    
+          # Check the IP address
+          print(wlan.ifconfig())
+
     .. tab:: C++
 
-      .. code-block:: c++
-         
-        #include <WiFi.h>
+        .. code-block:: c++
 
-        const char* ssid     = "your-ssid";
-        const char* password = "your-password";
+          #include <WiFi.h>
 
-        void setup() {
-          Serial.begin(115200);
-          WiFi.begin(ssid, password);
+          const char* ssid     = "your-ssid";
+          const char* password = "your-password";
 
-          while (WiFi.status() != WL_CONNECTED) {
-            delay(1000);
-            Serial.println("Connecting to WiFi...");
+          void setup() {
+             Serial.begin(115200);
+             WiFi.begin(ssid, password);
+
+             while (WiFi.status() != WL_CONNECTED) {
+                delay(1000);
+                Serial.println("Connecting to WiFi...");
+             }
+
+             Serial.println("Connected to WiFi");
+             Serial.println(WiFi.localIP());
           }
 
-          Serial.println("Connected to WiFi");
-          Serial.println(WiFi.localIP());
-        }
-
-        void loop() {
-          // Your code here
-        }
+          void loop() {
+             // Your code here
+          }
 
 
 Bluetooth
@@ -62,6 +62,7 @@ Bluetooth
 Explore Bluetooth communication capabilities and learn how to connect to Bluetooth devices.
 
 scan sniffer Code
+
 .. tabs::
 
    .. tab:: MicroPython
