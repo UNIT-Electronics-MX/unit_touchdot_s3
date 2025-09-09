@@ -17,6 +17,77 @@ This versatile design provides users with extensive documentation and hardware a
 
 
 
+Pinout Distribution
+--------------------
+
+
+.. only:: latex
+
+
+    .. figure::  ./_static/pinout/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.png
+        :align: center
+
+        Top View Pinout Touch Dot S3
+      
+    .. figure::  ./_static/pinout/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.png
+        :align: center
+
+        Bottom View Pinout Touch Dot S3
+
+.. only:: html
+
+   .. raw:: html
+
+
+
+      <div style="text-align: center;">
+        <a href="./_static/pinout/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.png" target="_blank">
+          <img 
+            src="./_static/pinout/unit_pinout_top_v_0_2_0_ue0072_touch_dot_s3_en.png" 
+            alt="Top View Pinout Touch Dot S3" 
+            style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+          >
+        </a>
+      </div>
+      <br><br>
+
+
+
+      <div style="text-align: center;">
+        <a href="./_static/pinout/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.png" target="_blank">
+          <img 
+            src="./_static/pinout/unit_pinout_bottom_v_0_2_0_ue0072_touch_dot_s3_en.png" 
+            alt="Bottom View Pinout Touch Dot S3" 
+            style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+          >
+        </a>
+      </div>
+      <br><br>
+
+
+.. list-table:: PINOUT
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - **Group**
+     - **Available Pins**
+     - **Suggested Use**
+   * - **GPIO**
+     - D2 to D13
+     - Sensors, actuators
+   * - **UART**
+     - Tx and Rx
+     - Serial communication
+   * - **TouchPad**
+     - T1 to T11
+     - Capacitive sensors for touch detection
+   * - **Analog**
+     - A0 to A8
+     - 12-bit (0–4095) resolution
+   * - **SPI**
+     - Optional
+     - Displays, additional memory
+
 
 
 The following simplified tables present key pinout details.
