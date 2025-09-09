@@ -8,23 +8,52 @@ Wi-Fi
 ---------------------
 Learn how to set up and use Wi-Fi communication on the DualMCU ONE board.
 
-.. code-block::
+.. tabs::
 
-    import machine
-    import network
+   .. tab:: MicroPython
 
-    wlan = network.WLAN(network.STA_IF)
-    wlan.active(True)
-    wlan.connect('your-ssid', 'your-password')
+      .. code-block:: python
 
-    while not wlan.isconnected():
-        pass
+        import machine
+        import network
 
-    print('Connected to Wi-Fi')
+        wlan = network.WLAN(network.STA_IF)
+        wlan.active(True)
+        wlan.connect('your-ssid', 'your-password')
 
-    # Check the IP address
-    print(wlan.ifconfig())
+        while not wlan.isconnected():
+            pass
 
+        print('Connected to Wi-Fi')
+
+        # Check the IP address
+        print(wlan.ifconfig())
+    
+    .. tab:: C++
+
+      .. code-block:: c++
+         
+        #include <WiFi.h>
+
+        const char* ssid     = "your-ssid";
+        const char* password = "your-password";
+
+        void setup() {
+          Serial.begin(115200);
+          WiFi.begin(ssid, password);
+
+          while (WiFi.status() != WL_CONNECTED) {
+            delay(1000);
+            Serial.println("Connecting to WiFi...");
+          }
+
+          Serial.println("Connected to WiFi");
+          Serial.println(WiFi.localIP());
+        }
+
+        void loop() {
+          // Your code here
+        }
 
 
 Bluetooth
@@ -33,71 +62,74 @@ Bluetooth
 Explore Bluetooth communication capabilities and learn how to connect to Bluetooth devices.
 
 scan sniffer Code
+.. tabs::
 
-.. code-block:: python 
+   .. tab:: MicroPython
 
-    import bluetooth
-    import time
+      .. code-block:: python
 
-    # Initialize Bluetooth
-    ble = bluetooth.BLE()
-    ble.active(True)
+        import bluetooth
+        import time
 
-    # Helper function to convert memoryview to MAC address string
-    def format_mac(addr):
-        return ':'.join('{:02x}'.format(b) for b in addr)
+        # Initialize Bluetooth
+        ble = bluetooth.BLE()
+        ble.active(True)
 
-    # Helper function to parse device name from advertising data
-    def decode_name(data):
-        i = 0
-        length = len(data)
-        while i < length:
-            ad_length = data[i]
-            ad_type = data[i + 1]
-            if ad_type == 0x09:  # Complete Local Name
-                return str(data[i + 2:i + 1 + ad_length], 'utf-8')
-            elif ad_type == 0x08:  # Shortened Local Name
-                return str(data[i + 2:i + 1 + ad_length], 'utf-8')
-            i += ad_length + 1
-        return None
+        # Helper function to convert memoryview to MAC address string
+        def format_mac(addr):
+            return ':'.join('{:02x}'.format(b) for b in addr)
 
-    # Global counter for devices found
-    devices_found = 0
-    max_devices = 10  # Limit to 10 devices
+        # Helper function to parse device name from advertising data
+        def decode_name(data):
+            i = 0
+            length = len(data)
+            while i < length:
+                ad_length = data[i]
+                ad_type = data[i + 1]
+                if ad_type == 0x09:  # Complete Local Name
+                    return str(data[i + 2:i + 1 + ad_length], 'utf-8')
+                elif ad_type == 0x08:  # Shortened Local Name
+                    return str(data[i + 2:i + 1 + ad_length], 'utf-8')
+                i += ad_length + 1
+            return None
 
-    # Callback function to handle advertising reports
-    def bt_irq(event, data):
-        global devices_found
-        if event == 5:  # event 5 is for advertising reports
-            if devices_found >= max_devices:
-                ble.gap_scan(None)  # Stop scanning
-                print("Scan stopped, limit reached.")
-                return
-            
-            addr_type, addr, adv_type, rssi, adv_data = data
-            mac_addr = format_mac(addr)
-            device_name = decode_name(adv_data)
-            if device_name:
-                print(f"Device found: {mac_addr} (RSSI: {rssi}) Name: {device_name}")
-            else:
-                print(f"Device found: {mac_addr} (RSSI: {rssi}) Name: Unknown")
-            
-            devices_found += 1  # Increment counter
+        # Global counter for devices found
+        devices_found = 0
+        max_devices = 10  # Limit to 10 devices
 
-            if devices_found >= max_devices:
-                ble.gap_scan(None)  # Stop scanning
-                print("Scan stopped, limit reached.")
+        # Callback function to handle advertising reports
+        def bt_irq(event, data):
+            global devices_found
+            if event == 5:  # event 5 is for advertising reports
+                if devices_found >= max_devices:
+                    ble.gap_scan(None)  # Stop scanning
+                    print("Scan stopped, limit reached.")
+                    return
+                
+                addr_type, addr, adv_type, rssi, adv_data = data
+                mac_addr = format_mac(addr)
+                device_name = decode_name(adv_data)
+                if device_name:
+                    print(f"Device found: {mac_addr} (RSSI: {rssi}) Name: {device_name}")
+                else:
+                    print(f"Device found: {mac_addr} (RSSI: {rssi}) Name: Unknown")
+                
+                devices_found += 1  # Increment counter
 
-    # Set the callback function
-    ble.irq(bt_irq)
+                if devices_found >= max_devices:
+                    ble.gap_scan(None)  # Stop scanning
+                    print("Scan stopped, limit reached.")
 
-    # Start active scanning
-    ble.gap_scan(10000, 30000, 30000, True)  # Active scan for 10 seconds with interval and window of 30ms
+        # Set the callback function
+        ble.irq(bt_irq)
 
-    # Keep the program running to allow the callback to be processed
-    while True:
-        time.sleep(1)
+        # Start active scanning
+        ble.gap_scan(10000, 30000, 30000, True)  # Active scan for 10 seconds with interval and window of 30ms
 
+        # Keep the program running to allow the callback to be processed
+        while True:
+            time.sleep(1)
 
+    .. tab:: C++
 
-
+      .. code-block:: c++
