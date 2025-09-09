@@ -1,7 +1,7 @@
 General Purpose Input/Output (GPIO) Pins 
 ========================================
 
-The General Purpose Input/Output (GPIO) pins on the **TouchDot S3** development board are used to connect external devices to the microcontroller. These pins can be configured as either input or output. In this section, we will explore how to work with GPIO pins on the **TouchDot S3** development board using both MicroPython and C++.
+The General Purpose Input/Output (GPIO) pins on the **Touch Dot S3** development board are used to connect external devices to the microcontroller. These pins can be configured as either input or output. In this section, we will explore how to work with GPIO pins on the **Touch Dot S3** development board using both MicroPython and C++.
 
 .. _figura2-dualmcu-one:
 
@@ -9,9 +9,9 @@ The General Purpose Input/Output (GPIO) pins on the **TouchDot S3** development 
    :align: center
    :width: 40%
 
-   **TouchDot S3** Development Board
+   **Touch Dot S3** Development Board
 
-Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the **TouchDot S3** development board using both MicroPython and C++.
+Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the **Touch Dot S3** development board using both MicroPython and C++.
 
 Working with LEDs on ESP32-S3
 -----------------------------
@@ -23,7 +23,7 @@ LED Blinking Example
 
 .. tip::
 
-   The following example demonstrates how to blink an LED connected to GPIO pin 6 on the **TouchDot S3** development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.
+   The following example demonstrates how to blink an LED connected to GPIO pin 6 on the **Touch Dot S3** development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.
 
 .. tabs::
 

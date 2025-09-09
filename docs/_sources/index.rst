@@ -1,8 +1,8 @@
 .. STM32 Getting Started documentation master file, created by
    sphinx-quickstart on Thu Mar 13 11:22:00 2025.
 
-TouchDot development board 
-==========================
+Touch Dot development board 
+===========================
 
 .. note::
 
@@ -10,7 +10,7 @@ TouchDot development board
    please visit the project's GitHub repository.
 
 
-Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.
+Leveraging the ESP32-S3 chip, the Touch Dot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.
 
 **Microcontroller: ESP32-S3 Mini**
 

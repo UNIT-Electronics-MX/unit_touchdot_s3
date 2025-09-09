@@ -1,7 +1,7 @@
 Analog to Digital Conversion
 ============================
 
-Learn how to read analog sensor values using the ADC module on the **TouchDot S3** development board with the ESP32-S3. This section will cover the basics of analog input and conversion techniques.
+Learn how to read analog sensor values using the ADC module on the **Touch Dot S3** development board with the ESP32-S3. This section will cover the basics of analog input and conversion techniques.
 
 .. .. _figure_adc:
 
@@ -31,14 +31,14 @@ The process of converting an analog signal into a digital signal involves two st
 ADC Pin Mapping
 ---------------------
 
-Below is a table showing the distribution of ADC pins on the **TouchDot S3** board and their corresponding GPIO pins on the ESP32-S3.
+Below is a table showing the distribution of ADC pins on the **Touch Dot S3** board and their corresponding GPIO pins on the ESP32-S3.
 
 .. list-table:: ADC Pin Mapping
    :header-rows: 1
    :widths: 10 20 20
 
    * - Pin Number
-     - **TouchDot S3**
+     - **Touch Dot S3**
      - ESP32-S3
    * - 1
      - A0/D14
@@ -199,4 +199,4 @@ Below is an example that continuously reads from an ADC pin and prints the resul
    :alt: ADC
    :width: 95%
 
-   Example of input ADC0 on the **TouchDot S3** board.
+   Example of input ADC0 on the **Touch Dot S3** board.

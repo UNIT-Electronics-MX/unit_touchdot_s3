@@ -101,8 +101,3 @@ scan sniffer Code
 
 
 
-
-
-Serial
----------------------
-Learn about serial communication and how to communicate with other devices via serial ports.
