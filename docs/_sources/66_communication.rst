@@ -6,7 +6,7 @@ Unlock the full communication potential of the  ESP32-S3 board with various comm
 
 Wi-Fi
 ---------------------
-Learn how to set up and use Wi-Fi communication on the DualMCU ONE board.
+Learn how to set up and use Wi-Fi communication on the Touch Dot S3 board.
 
 .. tabs::
 
