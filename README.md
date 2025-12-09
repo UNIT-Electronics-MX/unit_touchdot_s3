@@ -3,12 +3,11 @@
 Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.
 
 <div align="center">
-  <a href="#"><img src="hardware/resources/unit_top_V_0_1_2_ue0072_Touch-Dot-S3.png" width="450px" alt="UNIT Touchdot S3"></a>
+  <a href="#"><img src="hardware/resources/unit_top_V_0_1_2_ue0072_Touch-Dot-S3.png" width="350px" alt="UNIT Touchdot S3"></a>
   <p>UNIT Touchdot S3</p>
 
 </div>
 
-### Additional Resources
 
 
 <div align="center">
