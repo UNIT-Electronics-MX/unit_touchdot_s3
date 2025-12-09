@@ -62,7 +62,7 @@ as wake-up sources during deep sleep. These pins maintain their state and can tr
 
 .. list-table:: ESP32-S3 RTC GPIO Pins
    :header-rows: 1
-   :widths: 15 15 20 50
+   :widths: auto
 
    * - GPIO
      - RTC GPIO
@@ -272,17 +272,17 @@ Button-Controlled Deep Sleep with Visual Feedback
       
       if (cause == ESP_SLEEP_WAKEUP_EXT0) {
         // Woke up because button was released (GPIO went HIGH)
-        Serial.println("═══════════════════════════════════════");
+        Serial.println("=======================================");
         Serial.println("  Woke up from Deep Sleep!");
         Serial.println("  Trigger: GPIO11 (Button Released)");
-        Serial.println("═══════════════════════════════════════");
+        Serial.println("=======================================");
         blinkWake();   // Visual wake-up indication
       } else {
         // Normal power-on or reset
-        Serial.println("═══════════════════════════════════════");
+        Serial.println("=======================================");
         Serial.println("  Normal Boot - System Ready");
         Serial.println("  Press button for 10s to enter sleep");
-        Serial.println("═══════════════════════════════════════");
+        Serial.println("=======================================");
       }
 
       // Configure wake-up source: Wake when GPIO11 goes HIGH (button released)
@@ -295,38 +295,38 @@ Button-Controlled Deep Sleep with Visual Feedback
     void loop() {
       int btn = digitalRead(BUTTON_PIN);
       
-      // ═══════════════════════════════════════════════════════════════
+      // ===============================================================
       // BUTTON PRESS DETECTION
-      // ═══════════════════════════════════════════════════════════════
+      // ===============================================================
       if (btn == LOW && !isPressed) {
         // Button just pressed (went LOW)
         isPressed = true;
         pressStart = millis();
-        Serial.println("🔘 Button PRESSED");
+        Serial.println("Button PRESSED");
         Serial.println("   Hold for 10 seconds to enter deep sleep...");
       }
 
-      // ═══════════════════════════════════════════════════════════════
+      // ===============================================================
       // BUTTON RELEASE DETECTION (Short Press)
-      // ═══════════════════════════════════════════════════════════════
+      // ===============================================================
       if (btn == HIGH && isPressed) {
         // Button released before 10 seconds
         isPressed = false;
         unsigned long pressDuration = millis() - pressStart;
         
-        Serial.print("🔘 Button RELEASED (");
+        Serial.print("Button RELEASED (");
         Serial.print(pressDuration);
         Serial.println(" ms)");
-        Serial.println("   → Short press detected - UI interaction");
-        Serial.println("   → You can handle your UI/images here\n");
+        Serial.println("   -> Short press detected - UI interaction");
+        Serial.println("   -> You can handle your UI/images here\n");
         
         // Handle your button click event here
         // Example: Change display, toggle feature, etc.
       }
 
-      // ═══════════════════════════════════════════════════════════════
-      // LONG PRESS DETECTION → ENTER DEEP SLEEP
-      // ═══════════════════════════════════════════════════════════════
+      // ===============================================================
+      // LONG PRESS DETECTION - ENTER DEEP SLEEP
+      // ===============================================================
       if (isPressed && btn == LOW) {
         unsigned long elapsed = millis() - pressStart;
         
@@ -334,7 +334,7 @@ Button-Controlled Deep Sleep with Visual Feedback
         static unsigned long lastUpdate = 0;
         if (elapsed - lastUpdate >= 1000) {
           lastUpdate = elapsed;
-          Serial.print("⏱️  Holding button: ");
+          Serial.print("Holding button: ");
           Serial.print(elapsed / 1000);
           Serial.println(" seconds...");
         }
@@ -342,12 +342,12 @@ Button-Controlled Deep Sleep with Visual Feedback
         // Check if 10 seconds elapsed
         if (elapsed >= 10000) {
           // Long press detected - enter deep sleep
-          Serial.println("\n═══════════════════════════════════════");
-          Serial.println("  💤 LONG PRESS DETECTED!");
+          Serial.println("\n=======================================");
+          Serial.println("  LONG PRESS DETECTED!");
           Serial.println("  Entering Deep Sleep Mode...");
           Serial.println("  System will wake when button released");
-          Serial.println("  Power consumption: ~5-10 µA");
-          Serial.println("═══════════════════════════════════════");
+          Serial.println("  Power consumption: ~5-10 uA");
+          Serial.println("=======================================");
           
           delay(300);  // Allow serial to flush
           
