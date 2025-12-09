@@ -111,7 +111,7 @@ To install Thonny IDE, follow the instructions below:
 
     .. raw:: html
 
-        <a href="https://wiki.uelectronics.com/tutoriales/inicio-arduino" target="_blank">MicroPython Compatibility Guide</a>
+        <a href="https://wiki.uelectronics.com/tutoriales/micropython" target="_blank">MicroPython Compatibility Guide</a>
 
 .. figure:: /_static/img/thonny_ide.png
     :width: 80%
