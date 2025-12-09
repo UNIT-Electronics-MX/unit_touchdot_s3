@@ -34,7 +34,7 @@ LED Blinking Example
             import machine
             import time
 
-            led = machine.Pin(6, machine.Pin.OUT)
+            led = machine.Pin(7, machine.Pin.OUT)
 
             def loop():
                 while True:
@@ -49,7 +49,7 @@ LED Blinking Example
 
         .. code-block:: c++
            
-            #define LED 6
+            #define LED 7
 
             // The setup function runs once when you press reset or power the board
             void setup() {
@@ -74,7 +74,7 @@ LED Blinking Example
             #include "freertos/task.h"
             #include "driver/gpio.h"
 
-            #define BLINK_GPIO GPIO_NUM_6  // Puedes cambiarlo según tu hardware
+            #define BLINK_GPIO GPIO_NUM_7  // Puedes cambiarlo según tu hardware
 
             void app_main(void)
             {

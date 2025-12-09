@@ -1,0 +1,1179 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Deep Sleep Mode &#8212; Touch Dot  User Guide and Technical Reference 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=00122899"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '77_deepsleep';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="icon" href="_static/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/icon.svg" type="image/x-icon">
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/touchdot.png" class="logo__image only-light" alt="Touch Dot  User Guide and Technical Reference 0.0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/touchdot.png" class="logo__image only-dark" alt="Touch Dot  User Guide and Technical Reference 0.0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_1_terms.html">Hardware License (MIT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_0_map.html">Pinout Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_1_tech.html">Hardware Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812-2020  Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3/edit/main/docs/77_deepsleep.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_Touch Dot_s3/issues/new?title=Issue%20on%20page%20%2F77_deepsleep.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/77_deepsleep.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Deep Sleep Mode</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-sleep-wake-up-sources">Deep Sleep Wake-up Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpio-features-and-capabilities">GPIO Features and Capabilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rtc-gpio-pins-deep-sleep-wake-up-capable">RTC GPIO Pins (Deep Sleep Wake-up Capable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpio-wake-up-modes">GPIO Wake-up Modes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-consumption-comparison">Power Consumption Comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-implementation-example">Complete Implementation Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#button-controlled-deep-sleep-with-visual-feedback">Button-Controlled Deep Sleep with Visual Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-explanation">Code Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-wake-up-methods">Alternative Wake-up Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timer-based-wake-up">Timer-Based Wake-up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-gpio-wake-up-ext1">Multiple GPIO Wake-up (EXT1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#touch-pad-wake-up">Touch Pad Wake-up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-reference">API Reference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-functions">Key Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wake-up-causes">Wake-up Causes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="deep-sleep-mode">
+<h1>Deep Sleep Mode<a class="headerlink" href="#deep-sleep-mode" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The ESP32-S3 Deep Sleep mode is an ultra-low power state that significantly reduces power consumption
+by shutting down most of the chip’s components, including the CPU, most RAM, and digital peripherals.
+In this mode, only the RTC (Real-Time Clock) controller, RTC peripherals, and RTC memory remain powered,
+allowing the device to wake up from various sources while consuming minimal power (typically around 5-10 µA).</p>
+<p>Deep Sleep is ideal for battery-powered applications that need to operate for extended periods with
+minimal power consumption, such as IoT sensors, wearables, and remote monitoring devices.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Ultra-low power consumption</strong>: ~5-10 µA in deep sleep mode</p></li>
+<li><p><strong>Multiple wake-up sources</strong>: External GPIO, timers, touch pads, ULP coprocessor</p></li>
+<li><p><strong>RTC memory retention</strong>: Preserve data across sleep cycles</p></li>
+<li><p><strong>Fast wake-up</strong>: Resume execution quickly from sleep state</p></li>
+<li><p><strong>Configurable wake conditions</strong>: Flexible wake-up triggers</p></li>
+<li><p><strong>Power domain control</strong>: Selective power management for different chip regions</p></li>
+</ul>
+</section>
+<section id="deep-sleep-wake-up-sources">
+<h2>Deep Sleep Wake-up Sources<a class="headerlink" href="#deep-sleep-wake-up-sources" title="Link to this heading">#</a></h2>
+<p>The ESP32-S3 supports multiple wake-up sources that can bring the chip out of deep sleep:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-text">Wake-up Sources</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Wake Source</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>EXT0</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp_sleep_enable_ext0_wakeup()</span></code></p></td>
+<td><p>Wake up using a single RTC GPIO pin (level-triggered: HIGH or LOW)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>EXT1</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp_sleep_enable_ext1_wakeup()</span></code></p></td>
+<td><p>Wake up using multiple RTC GPIO pins (supports AND/OR logic)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Timer</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp_sleep_enable_timer_wakeup()</span></code></p></td>
+<td><p>Wake up after a specified time period (microseconds)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Touch Pad</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp_sleep_enable_touchpad_wakeup()</span></code></p></td>
+<td><p>Wake up when touch sensor detects a touch event</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ULP</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp_sleep_enable_ulp_wakeup()</span></code></p></td>
+<td><p>Wake up by Ultra-Low-Power coprocessor program</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>GPIO</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">esp_deep_sleep_enable_gpio_wakeup()</span></code></p></td>
+<td><p>Wake up using GPIO pins (ESP32-S3 specific)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="gpio-features-and-capabilities">
+<h2>GPIO Features and Capabilities<a class="headerlink" href="#gpio-features-and-capabilities" title="Link to this heading">#</a></h2>
+<section id="rtc-gpio-pins-deep-sleep-wake-up-capable">
+<h3>RTC GPIO Pins (Deep Sleep Wake-up Capable)<a class="headerlink" href="#rtc-gpio-pins-deep-sleep-wake-up-capable" title="Link to this heading">#</a></h3>
+<p>The ESP32-S3 has specific GPIO pins that are connected to the RTC domain and can be used
+as wake-up sources during deep sleep. These pins maintain their state and can trigger wake-up events.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-text">ESP32-S3 RTC GPIO Pins</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>GPIO</p></th>
+<th class="head"><p>RTC GPIO</p></th>
+<th class="head"><p>Wake Support</p></th>
+<th class="head"><p>Additional Features</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GPIO0</p></td>
+<td><p>RTC_GPIO0</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>Strapping pin, ADC1_CH0, TOUCH1</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO1</p></td>
+<td><p>RTC_GPIO1</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH1, TOUCH2</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO2</p></td>
+<td><p>RTC_GPIO2</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH2, TOUCH3, Strapping pin</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO3</p></td>
+<td><p>RTC_GPIO3</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH3, TOUCH4</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO4</p></td>
+<td><p>RTC_GPIO4</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH4, TOUCH5</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO5</p></td>
+<td><p>RTC_GPIO5</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH5, TOUCH6</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO6</p></td>
+<td><p>RTC_GPIO6</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH6, TOUCH7</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO7</p></td>
+<td><p>RTC_GPIO7</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH7, TOUCH8</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO8</p></td>
+<td><p>RTC_GPIO8</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH8, TOUCH9</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO9</p></td>
+<td><p>RTC_GPIO9</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH9, TOUCH10</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO10</p></td>
+<td><p>RTC_GPIO10</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC1_CH10, TOUCH11</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO11</p></td>
+<td><p>RTC_GPIO11</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH0, TOUCH12</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO12</p></td>
+<td><p>RTC_GPIO12</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH1, TOUCH13</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO13</p></td>
+<td><p>RTC_GPIO13</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH2, TOUCH14</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO14</p></td>
+<td><p>RTC_GPIO14</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH3, TOUCH15</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO15</p></td>
+<td><p>RTC_GPIO15</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH4, XTAL_32K_P</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO16</p></td>
+<td><p>RTC_GPIO16</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH5, XTAL_32K_N</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO17</p></td>
+<td><p>RTC_GPIO17</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH6</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO18</p></td>
+<td><p>RTC_GPIO18</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH7</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO19</p></td>
+<td><p>RTC_GPIO19</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH8, USB D-</p></td>
+</tr>
+<tr class="row-even"><td><p>GPIO20</p></td>
+<td><p>RTC_GPIO20</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>ADC2_CH9, USB D+</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO21</p></td>
+<td><p>RTC_GPIO21</p></td>
+<td><p>EXT0/EXT1</p></td>
+<td><p>Can be used for RTC functions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="gpio-wake-up-modes">
+<h3>GPIO Wake-up Modes<a class="headerlink" href="#gpio-wake-up-modes" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-text">GPIO Wake-up Configuration</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Level Triggered (EXT0)</strong></p></td>
+<td><p>Wake up when a single GPIO reaches a specific level (HIGH=1 or LOW=0).
+Simple and commonly used for button wake-up.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Level Triggered (EXT1)</strong></p></td>
+<td><p>Wake up when multiple GPIOs meet certain conditions. Supports:</p>
+<ul class="simple">
+<li><p><strong>ALL_LOW</strong>: Wake when ALL selected pins are LOW</p></li>
+<li><p><strong>ANY_HIGH</strong>: Wake when ANY selected pin is HIGH</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Edge Triggered (GPIO)</strong></p></td>
+<td><p>Wake up on rising or falling edge of GPIO signal. More flexible but
+requires ESP32-S3 specific API.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="power-consumption-comparison">
+<h2>Power Consumption Comparison<a class="headerlink" href="#power-consumption-comparison" title="Link to this heading">#</a></h2>
+<p>Understanding the power consumption in different modes helps optimize battery life:</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id4">
+<caption><span class="caption-text">ESP32-S3 Power Consumption Modes</span><a class="headerlink" href="#id4" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>Current Draw</p></th>
+<th class="head"><p>Use Case</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Active (WiFi TX)</strong></p></td>
+<td><p>~160-260 mA</p></td>
+<td><p>Normal operation with WiFi transmitting</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Active (WiFi RX)</strong></p></td>
+<td><p>~80-100 mA</p></td>
+<td><p>WiFi receiving/listening</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Modem Sleep</strong></p></td>
+<td><p>~20-30 mA</p></td>
+<td><p>CPU active, WiFi/BT suspended</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Light Sleep</strong></p></td>
+<td><p>~0.8-3 mA</p></td>
+<td><p>CPU suspended, peripherals can wake it</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Deep Sleep</strong></p></td>
+<td><p>~5-10 µA</p></td>
+<td><p>Only RTC active, requires reset-like wake</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hibernation</strong></p></td>
+<td><p>~2-5 µA</p></td>
+<td><p>Minimal power, limited wake sources</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="complete-implementation-example">
+<h2>Complete Implementation Example<a class="headerlink" href="#complete-implementation-example" title="Link to this heading">#</a></h2>
+<p>This example demonstrates a power-efficient button interface that uses deep sleep to conserve
+battery life. The system monitors a button and enters deep sleep after 10 seconds of continuous
+press, then wakes up when the button is released.</p>
+<section id="button-controlled-deep-sleep-with-visual-feedback">
+<h3>Button-Controlled Deep Sleep with Visual Feedback<a class="headerlink" href="#button-controlled-deep-sleep-with-visual-feedback" title="Link to this heading">#</a></h3>
+<p><strong>Application Description:</strong></p>
+<ul class="simple">
+<li><p><strong>Normal Operation</strong>: Button clicks are detected and can be used for UI interaction</p></li>
+<li><p><strong>Long Press Detection</strong>: Holding the button for 10 seconds triggers deep sleep</p></li>
+<li><p><strong>Wake-up Indication</strong>: LED blinks 3 times upon waking from deep sleep</p></li>
+<li><p><strong>Power Saving</strong>: System enters ultra-low power mode (~5-10 µA) when sleeping</p></li>
+<li><p><strong>Smart Wake-up</strong>: Wakes automatically when button is released (transitions to HIGH)</p></li>
+</ul>
+<p><strong>Hardware Connections:</strong></p>
+<ul class="simple">
+<li><p><strong>GPIO11</strong>: Button input with internal pull-up (button connects to GND when pressed)</p></li>
+<li><p><strong>GPIO7</strong>: LED output for visual feedback (active HIGH)</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_sleep.h&quot;</span>
+
+<span class="cp">#define BUTTON_PIN 11         </span><span class="c1">// Button / Switch pin</span>
+<span class="cp">#define WAKE_PIN  GPIO_NUM_11 </span><span class="c1">// Wake from deep sleep (HIGH level trigger)</span>
+<span class="cp">#define LED_PIN   7           </span><span class="c1">// LED for visual feedback</span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">pressStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Blink LED to indicate wake-up from deep sleep</span>
+<span class="cm"> *</span>
+<span class="cm"> * Provides visual feedback that the system has successfully</span>
+<span class="cm"> * woken up from deep sleep mode.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">blinkWake</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span><span class="w">  </span><span class="c1">// Allow serial to stabilize</span>
+
+<span class="w">  </span><span class="c1">// Configure GPIO pins</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// Button connects to GND when pressed</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Check what caused the wake-up</span>
+<span class="w">  </span><span class="n">esp_sleep_wakeup_cause_t</span><span class="w"> </span><span class="n">cause</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">esp_sleep_get_wakeup_cause</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cause</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ESP_SLEEP_WAKEUP_EXT0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Woke up because button was released (GPIO went HIGH)</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;═══════════════════════════════════════&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  Woke up from Deep Sleep!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  Trigger: GPIO11 (Button Released)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;═══════════════════════════════════════&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">blinkWake</span><span class="p">();</span><span class="w">   </span><span class="c1">// Visual wake-up indication</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Normal power-on or reset</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;═══════════════════════════════════════&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  Normal Boot - System Ready&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  Press button for 10s to enter sleep&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;═══════════════════════════════════════&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Configure wake-up source: Wake when GPIO11 goes HIGH (button released)</span>
+<span class="w">  </span><span class="c1">// This allows the button to be held LOW during sleep and wake on release</span>
+<span class="w">  </span><span class="n">esp_sleep_enable_ext0_wakeup</span><span class="p">(</span><span class="n">WAKE_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1 = Wake on HIGH level</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Monitoring button state...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTON_PIN</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// ═══════════════════════════════════════════════════════════════</span>
+<span class="w">  </span><span class="c1">// BUTTON PRESS DETECTION</span>
+<span class="w">  </span><span class="c1">// ═══════════════════════════════════════════════════════════════</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">btn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">isPressed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Button just pressed (went LOW)</span>
+<span class="w">    </span><span class="n">isPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pressStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;🔘 Button PRESSED&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;   Hold for 10 seconds to enter deep sleep...&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// ═══════════════════════════════════════════════════════════════</span>
+<span class="w">  </span><span class="c1">// BUTTON RELEASE DETECTION (Short Press)</span>
+<span class="w">  </span><span class="c1">// ═══════════════════════════════════════════════════════════════</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">btn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isPressed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Button released before 10 seconds</span>
+<span class="w">    </span><span class="n">isPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">pressDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pressStart</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;🔘 Button RELEASED (&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pressDuration</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; ms)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;   → Short press detected - UI interaction&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;   → You can handle your UI/images here</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Handle your button click event here</span>
+<span class="w">    </span><span class="c1">// Example: Change display, toggle feature, etc.</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// ═══════════════════════════════════════════════════════════════</span>
+<span class="w">  </span><span class="c1">// LONG PRESS DETECTION → ENTER DEEP SLEEP</span>
+<span class="w">  </span><span class="c1">// ═══════════════════════════════════════════════════════════════</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPressed</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">elapsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pressStart</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Update progress every second</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">lastUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">elapsed</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastUpdate</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">lastUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elapsed</span><span class="p">;</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;⏱️  Holding button: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">elapsed</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot; seconds...&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Check if 10 seconds elapsed</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">elapsed</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Long press detected - enter deep sleep</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">═══════════════════════════════════════&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  💤 LONG PRESS DETECTED!&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  Entering Deep Sleep Mode...&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  System will wake when button released&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;  Power consumption: ~5-10 µA&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;═══════════════════════════════════════&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span><span class="w">  </span><span class="c1">// Allow serial to flush</span>
+
+<span class="w">      </span><span class="c1">// Enter deep sleep</span>
+<span class="w">      </span><span class="c1">// System stays asleep while button is held LOW</span>
+<span class="w">      </span><span class="c1">// Wakes automatically when button is released (goes HIGH)</span>
+<span class="w">      </span><span class="n">esp_deep_sleep_start</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w">  </span><span class="c1">// Small delay to debounce and reduce CPU load</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="code-explanation">
+<h3>Code Explanation<a class="headerlink" href="#code-explanation" title="Link to this heading">#</a></h3>
+<p><strong>Wake-up Configuration:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">esp_sleep_enable_ext0_wakeup</span><span class="p">(</span><span class="n">WAKE_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Configures GPIO11 as wake-up source</p></li>
+<li><p>Parameter <code class="docutils literal notranslate"><span class="pre">1</span></code> means wake on HIGH level</p></li>
+<li><p>Button held LOW keeps device asleep</p></li>
+<li><p>Releasing button (goes HIGH) triggers wake-up</p></li>
+</ul>
+<p><strong>Button State Machine:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Idle State</strong>: Button HIGH (not pressed), waiting for press</p></li>
+<li><p><strong>Pressed State</strong>: Button LOW, timer starts counting</p></li>
+<li><p><strong>Short Release</strong>: Button released before 10s → Normal UI interaction</p></li>
+<li><p><strong>Long Press</strong>: Button held for 10s → Enter deep sleep</p></li>
+<li><p><strong>Wake-up</strong>: Button released during sleep → System wakes and blinks LED</p></li>
+</ol>
+<p><strong>Power Optimization Strategy:</strong></p>
+<ul class="simple">
+<li><p><strong>Active Mode</strong>: Only when monitoring button (20-30 mA)</p></li>
+<li><p><strong>Deep Sleep</strong>: After long press (~5-10 µA)</p></li>
+<li><p><strong>Battery Savings</strong>: ~99.97% reduction in power consumption during sleep</p></li>
+</ul>
+</section>
+</section>
+<section id="alternative-wake-up-methods">
+<h2>Alternative Wake-up Methods<a class="headerlink" href="#alternative-wake-up-methods" title="Link to this heading">#</a></h2>
+<section id="timer-based-wake-up">
+<h3>Timer-Based Wake-up<a class="headerlink" href="#timer-based-wake-up" title="Link to this heading">#</a></h3>
+<p>Wake up after a specific time period (useful for periodic sensor readings):</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define uS_TO_S_FACTOR 1000000ULL  </span><span class="c1">// Conversion factor for micro to seconds</span>
+<span class="cp">#define TIME_TO_SLEEP  30          </span><span class="c1">// Sleep for 30 seconds</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Configure timer wake-up</span>
+<span class="w">  </span><span class="n">esp_sleep_enable_timer_wakeup</span><span class="p">(</span><span class="n">TIME_TO_SLEEP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">uS_TO_S_FACTOR</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Going to sleep for 30 seconds&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">esp_deep_sleep_start</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="multiple-gpio-wake-up-ext1">
+<h3>Multiple GPIO Wake-up (EXT1)<a class="headerlink" href="#multiple-gpio-wake-up-ext1" title="Link to this heading">#</a></h3>
+<p>Wake up when multiple buttons are pressed:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define BUTTON1 GPIO_NUM_11</span>
+<span class="cp">#define BUTTON2 GPIO_NUM_12</span>
+<span class="cp">#define BUTTON3 GPIO_NUM_13</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Wake when ANY button is pressed (goes HIGH)</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1ULL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">BUTTON1</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="mi">1ULL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">BUTTON2</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="mi">1ULL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">BUTTON3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">esp_sleep_enable_ext1_wakeup</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">ESP_EXT1_WAKEUP_ANY_HIGH</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">esp_deep_sleep_start</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="touch-pad-wake-up">
+<h3>Touch Pad Wake-up<a class="headerlink" href="#touch-pad-wake-up" title="Link to this heading">#</a></h3>
+<p>Wake up from capacitive touch sensor:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;driver/touch_pad.h&quot;</span>
+
+<span class="cp">#define TOUCH_THRESH  40  </span><span class="c1">// Threshold for touch detection</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Initialize touch pad</span>
+<span class="w">  </span><span class="n">touch_pad_init</span><span class="p">();</span>
+<span class="w">  </span><span class="n">touch_pad_set_voltage</span><span class="p">(</span><span class="n">TOUCH_HVOLT_2V7</span><span class="p">,</span><span class="w"> </span><span class="n">TOUCH_LVOLT_0V5</span><span class="p">,</span><span class="w"> </span><span class="n">TOUCH_HVOLT_ATTEN_1V</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Configure touch pad 9 (GPIO9) as wake source</span>
+<span class="w">  </span><span class="n">touch_pad_config</span><span class="p">(</span><span class="n">TOUCH_PAD_NUM9</span><span class="p">,</span><span class="w"> </span><span class="n">TOUCH_THRESH</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Enable touch pad wake-up</span>
+<span class="w">  </span><span class="n">esp_sleep_enable_touchpad_wakeup</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">esp_deep_sleep_start</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Always flush serial output before sleep:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Going to sleep...&quot;</span><span class="p">);</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">flush</span><span class="p">();</span><span class="w">  </span><span class="c1">// Wait for transmission to complete</span>
+<span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">esp_deep_sleep_start</span><span class="p">();</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Use RTC memory to preserve data across sleep cycles:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RTC_DATA_ATTR</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bootCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Preserved in RTC memory</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">bootCount</span><span class="o">++</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Boot number: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bootCount</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Disable unnecessary peripherals before sleep:</strong></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Disable WiFi and Bluetooth</span>
+<span class="n">WiFi</span><span class="p">.</span><span class="n">disconnect</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="n">WiFi</span><span class="p">.</span><span class="n">mode</span><span class="p">(</span><span class="n">WIFI_OFF</span><span class="p">);</span>
+<span class="n">btStop</span><span class="p">();</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Consider wake-up latency (~100-500 ms)</strong> for time-critical applications</p></li>
+<li><p><strong>Test current consumption</strong> with a multimeter to verify sleep mode operation</p></li>
+<li><p><strong>Use appropriate pull-up/pull-down resistors</strong> on wake-up GPIO pins</p></li>
+<li><p><strong>Handle wake-up causes</strong> to provide appropriate behavior based on wake source</p></li>
+</ol>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<p><strong>Device doesn’t wake up:</strong></p>
+<ul class="simple">
+<li><p>Verify GPIO is RTC-capable (see GPIO table above)</p></li>
+<li><p>Check wake-up level configuration (HIGH vs LOW)</p></li>
+<li><p>Ensure external circuitry doesn’t hold pin in sleep state</p></li>
+<li><p>Verify internal pull-up/pull-down configuration</p></li>
+</ul>
+<p><strong>High current consumption in sleep:</strong></p>
+<ul class="simple">
+<li><p>Disable WiFi/BT before sleeping</p></li>
+<li><p>Check for peripherals keeping chip awake</p></li>
+<li><p>Verify GPIO states (floating pins consume power)</p></li>
+<li><p>Use deep sleep isolation for unused pins</p></li>
+</ul>
+<p><strong>Unexpected wake-ups:</strong></p>
+<ul class="simple">
+<li><p>Add debouncing to wake-up GPIO</p></li>
+<li><p>Check for noise on wake-up lines</p></li>
+<li><p>Verify wake-up conditions (EXT1 ANY_HIGH vs ALL_LOW)</p></li>
+<li><p>Ensure stable power supply</p></li>
+</ul>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">#</a></h2>
+<section id="key-functions">
+<h3>Key Functions<a class="headerlink" href="#key-functions" title="Link to this heading">#</a></h3>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Enable wake-up sources</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">esp_sleep_enable_ext0_wakeup</span><span class="p">(</span><span class="n">gpio_num_t</span><span class="w"> </span><span class="n">gpio_num</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="p">);</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">esp_sleep_enable_ext1_wakeup</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">esp_sleep_ext1_wakeup_mode_t</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">esp_sleep_enable_timer_wakeup</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">time_in_us</span><span class="p">);</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">esp_sleep_enable_touchpad_wakeup</span><span class="p">();</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">esp_deep_sleep_enable_gpio_wakeup</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">esp_deepsleep_gpio_wake_up_mode_t</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
+
+<span class="c1">// Enter sleep</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">esp_deep_sleep_start</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">esp_light_sleep_start</span><span class="p">();</span>
+
+<span class="c1">// Check wake-up cause</span>
+<span class="n">esp_sleep_wakeup_cause_t</span><span class="w"> </span><span class="nf">esp_sleep_get_wakeup_cause</span><span class="p">();</span>
+
+<span class="c1">// Disable wake-up sources</span>
+<span class="n">esp_err_t</span><span class="w"> </span><span class="nf">esp_sleep_disable_wakeup_source</span><span class="p">(</span><span class="n">esp_sleep_source_t</span><span class="w"> </span><span class="n">source</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="wake-up-causes">
+<h3>Wake-up Causes<a class="headerlink" href="#wake-up-causes" title="Link to this heading">#</a></h3>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_UNDEFINED</span><span class="p">,</span><span class="w">    </span><span class="c1">// Not from sleep</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_ALL</span><span class="p">,</span><span class="w">          </span><span class="c1">// Not a wake-up cause</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_EXT0</span><span class="p">,</span><span class="w">         </span><span class="c1">// Wake by external signal (RTC_IO)</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_EXT1</span><span class="p">,</span><span class="w">         </span><span class="c1">// Wake by external signal (RTC_CNTL)</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_TIMER</span><span class="p">,</span><span class="w">        </span><span class="c1">// Wake by timer</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_TOUCHPAD</span><span class="p">,</span><span class="w">     </span><span class="c1">// Wake by touchpad</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_ULP</span><span class="p">,</span><span class="w">          </span><span class="c1">// Wake by ULP program</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_GPIO</span><span class="p">,</span><span class="w">         </span><span class="c1">// Wake by GPIO</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_UART</span><span class="p">,</span><span class="w">         </span><span class="c1">// Wake by UART</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_WIFI</span><span class="p">,</span><span class="w">         </span><span class="c1">// Wake by WiFi</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_COCPU</span><span class="p">,</span><span class="w">        </span><span class="c1">// Wake by COCPU int</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_COCPU_TRAP_TRIG</span><span class="p">,</span><span class="w">  </span><span class="c1">// Wake by COCPU crash</span>
+<span class="w">    </span><span class="n">ESP_SLEEP_WAKEUP_BT</span><span class="w">           </span><span class="c1">// Wake by BT</span>
+<span class="p">}</span><span class="w"> </span><span class="n">esp_sleep_wakeup_cause_t</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf">ESP32-S3 Technical Reference Manual - Sleep Modes</a></p></li>
+<li><p><a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/system/sleep_modes.html">ESP-IDF Deep Sleep Documentation</a></p></li>
+<li><p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_low_power_design_guide_en.pdf">ESP32-S3 Low Power Design Guidelines</a></p></li>
+<li><p><a class="reference internal" href="11_gpio.html"><span class="doc">General Purpose Input/Output (GPIO) Pins</span></a> - GPIO Configuration and Usage</p></li>
+<li><p><a class="reference internal" href="22_adc.html"><span class="doc">Analog to Digital Conversion</span></a> - ADC with Low Power Modes</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-sleep-wake-up-sources">Deep Sleep Wake-up Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpio-features-and-capabilities">GPIO Features and Capabilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rtc-gpio-pins-deep-sleep-wake-up-capable">RTC GPIO Pins (Deep Sleep Wake-up Capable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpio-wake-up-modes">GPIO Wake-up Modes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-consumption-comparison">Power Consumption Comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-implementation-example">Complete Implementation Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#button-controlled-deep-sleep-with-visual-feedback">Button-Controlled Deep Sleep with Visual Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-explanation">Code Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-wake-up-methods">Alternative Wake-up Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timer-based-wake-up">Timer-Based Wake-up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-gpio-wake-up-ext1">Multiple GPIO Wake-up (EXT1)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#touch-pad-wake-up">Touch Pad Wake-up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-reference">API Reference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-functions">Key Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wake-up-causes">Wake-up Causes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">See Also</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By R&D and Innovation Department
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Unit Electronics.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

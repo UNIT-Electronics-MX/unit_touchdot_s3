@@ -416,7 +416,7 @@ document.write(`
 <figure class="align-center" id="id1">
 <span id="figura2-dualmcu-one"></span><a class="reference internal image-reference" href="_images/touchdot.png"><img alt="_images/touchdot.png" src="_images/touchdot.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text"><strong>Touch Dot S3</strong> Development Board</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text"><strong>Touch Dot S3</strong> Development Board</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the <strong>Touch Dot S3</strong> development board using both MicroPython and C++.</p>
@@ -433,7 +433,7 @@ document.write(`
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="n">led</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -445,7 +445,7 @@ document.write(`
 <span class="n">loop</span><span class="p">()</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define LED 6</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define LED 7</span>
 
 <span class="c1">// The setup function runs once when you press reset or power the board</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -467,7 +467,7 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;freertos/task.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;driver/gpio.h&quot;</span>
 
-<span class="cp">#define BLINK_GPIO GPIO_NUM_6  </span><span class="c1">// Puedes cambiarlo según tu hardware</span>
+<span class="cp">#define BLINK_GPIO GPIO_NUM_7  </span><span class="c1">// Puedes cambiarlo según tu hardware</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">app_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
