@@ -55,7 +55,6 @@ Leveraging the ESP32-S3 chip, the Touch Dot S3 is a versatile development board 
    01_setup
    02_lib
    02_1_esp-idf
-
    11_gpio
    22_adc
    33_i2c
