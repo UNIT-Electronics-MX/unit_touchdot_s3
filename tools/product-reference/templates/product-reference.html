@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="$lang$">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Pandoc">
+  <title>$title$ — $subtitle$</title>
+  $for(css)$
+  <link rel="stylesheet" href="$css$">
+  $endfor$
+</head>
+<body>
+  <section class="cover">
+    <div class="cover__brand">
+      <img src="tools/product-reference/assets/unit-logo.png" alt="UNIT Electronics">
+      <span>PRODUCT REFERENCE MANUAL</span>
+    </div>
+
+    <div class="cover__identity">
+      <p class="cover__eyebrow">WEARABLE DEVELOPMENT BOARD</p>
+      <h1>$title$</h1>
+      <p class="cover__part">Mfr. Part #: $part-number$</p>
+      <p class="cover__version">Version $version$</p>
+    </div>
+
+    <div class="cover__visual">
+      <div class="cover__halo"></div>
+      <img
+        src="hardware/resources/unit_top_V_0_1_2_ue0072_Touch-Dot-S3.png"
+        alt="TouchDot S3 top view">
+    </div>
+
+    <div class="cover__summary">
+      <p>
+        ESP32-S3 wireless development, capacitive touch, battery power,
+        storage, and sewable I/O in a compact circular board.
+      </p>
+      <div class="cover__tags">
+        <span>I²C / QWIIC</span>
+        <span>SPI / UART</span>
+        <span>USB-C / LiPo</span>
+        <span>Wi-Fi / BLE</span>
+      </div>
+    </div>
+
+    <div class="cover__footer">
+      <span>UNIT Electronics® Development Board</span>
+      <span>Released $date$</span>
+    </div>
+  </section>
+
+  $if(toc)$
+  <section class="contents-page">
+    <p class="section-kicker">DOCUMENT MAP</p>
+    <h1>Contents</h1>
+    <div class="contents-page__rule"></div>
+    $toc$
+  </section>
+  $endif$
+
+  <article class="product-reference-content">
+    $body$
+  </article>
+</body>
+</html>

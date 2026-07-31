@@ -9,6 +9,11 @@ Touch Dot development board
    This documentation is actively evolving. For the latest updates and revisions,
    please visit the project's GitHub repository.
 
+.. important::
+
+   The current product datasheet, schematic, pinouts, and other hardware files
+   are available in the `TouchDot S3 hardware downloads <hardware/index.html>`_.
+
 
 Leveraging the ESP32-S3 chip, the Touch Dot S3 is a versatile development board crafted for creative wearables, IoT implementations, and smart devices. Inspired by the Lilypad aesthetic but delivering modern functionality, it marries a compact form factor with robust connectivity and power management features for seamless prototyping.
 
@@ -67,7 +72,6 @@ Leveraging the ESP32-S3 chip, the Touch Dot S3 is a versatile development board 
    report
    
    
-
 
 
 

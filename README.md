@@ -16,7 +16,8 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 
 
 [<img src="https://img.shields.io/badge/Product%20Wiki-blue?style=for-the-badge" alt="Product Wiki">](https://wiki.uelectronics.com/wiki/unit-touchdot-s3)
-[<img src="https://img.shields.io/badge/Datasheet-green?style=for-the-badge" alt="Datasheet">](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/docs/unit_touchdot_s3_product_brief.pdf)
+[<img src="https://img.shields.io/badge/Datasheet-green?style=for-the-badge" alt="Datasheet">](https://github.com/UNIT-Electronics-MX/unit_touchdot_s3/blob/main/docs/hardware/unit_product_reference_v_0_1_2_ue0072_touch_dot_s3.pdf)
+[<img src="https://img.shields.io/badge/Hardware%20Files-darkred?style=for-the-badge" alt="Hardware Files">](https://unit-electronics-mx.github.io/unit_touchdot_s3/hardware/)
 [<img src="https://img.shields.io/badge/Buy%20Now-orange?style=for-the-badge" alt="Buy Now">](https://uelectronics.com/producto/unit-touchdot-s3/)
 [<img src="https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge" alt="Getting Started">](https://unit-electronics-mx.github.io/unit_touchdot_s3/)
 
@@ -59,4 +60,3 @@ Leveraging the ESP32-S3 chip, the Touchdot S3 is a versatile development board c
 ### License
 
 This project is licensed under the MIT License.
-

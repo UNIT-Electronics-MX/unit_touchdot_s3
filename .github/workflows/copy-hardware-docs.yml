@@ -1,0 +1,88 @@
+name: Build TouchDot Datasheet and Hardware Documentation
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'hardware/**'
+      - 'software/sphinx/**'
+      - 'tools/product-reference/**'
+      - '.github/scripts/**'
+      - '.github/workflows/copy-hardware-docs.yml'
+  pull_request:
+    paths:
+      - 'hardware/**'
+      - 'software/sphinx/**'
+      - 'tools/product-reference/**'
+      - '.github/scripts/**'
+      - '.github/workflows/copy-hardware-docs.yml'
+  workflow_dispatch: # Permite ejecutar manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.12'
+
+    - name: Install document build tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install --yes pandoc fonts-noto-core fonts-noto-mono ghostscript latexmk texlive-latex-extra texlive-fonts-recommended texlive-lang-english
+        python -m pip install --upgrade pip
+        python -m pip install --requirement software/sphinx/requirements.txt
+        python -m pip install weasyprint
+
+    - name: Build TouchDot product reference / datasheet from Markdown
+      run: |
+        chmod +x tools/product-reference/build.sh
+        tools/product-reference/build.sh
+
+    - name: Build Sphinx user guide and PDF
+      working-directory: software/sphinx
+      run: |
+        make clean
+        make pdfx
+
+    - name: Clean previous documentation
+      run: |
+        chmod +x .github/scripts/clean_docs.sh
+        .github/scripts/clean_docs.sh
+
+    - name: Publish Sphinx documentation at the site root
+      run: |
+        mkdir -p docs
+        cp -a software/sphinx/docs/. docs/
+        cp software/sphinx/pdf/programmer.pdf docs/unit_touchdot_s3_sphinx.pdf
+        touch docs/.nojekyll
+        test -s docs/index.html
+        test -s docs/unit_touchdot_s3_sphinx.pdf
+
+    - name: Publish hardware files and datasheet under docs/hardware
+      run: |
+        chmod +x .github/scripts/build_docs.sh
+        .github/scripts/build_docs.sh
+
+    - name: Commit and push changes
+      if: github.event_name != 'pull_request'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/
+        if ! git diff --cached --quiet; then
+          git commit -m "Auto-update Sphinx and hardware documentation [skip ci]"
+          git push
+        else
+          echo "No changes to commit"
+        fi

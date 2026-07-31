@@ -1,0 +1,23 @@
+---
+title: "TouchDot S3"
+subtitle: "Product Reference / Datasheet — Hardware V0.1.2 — Mfr. Part #: UE0072"
+author: "UNIT Electronics"
+lang: en-US
+version: "1.0.0"
+part-number: "UE0072"
+date: "2026-07-31"
+toc-title: "Contents"
+
+# The order of this list determines the chapter order in the final document.
+chapters:
+  - tools/product-reference/chapters/00-description.md
+  - tools/product-reference/chapters/01-board.md
+  - tools/product-reference/chapters/02-ratings.md
+  - tools/product-reference/chapters/03-functional-overview.md
+  - tools/product-reference/chapters/04-connectors-pinouts.md
+  - tools/product-reference/chapters/05-board-operation.md
+  - tools/product-reference/chapters/06-mechanical.md
+  - tools/product-reference/chapters/07-company.md
+  - tools/product-reference/chapters/08-references.md
+  - tools/product-reference/chapters/09-appendix.md
+---
